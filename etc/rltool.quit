@@ -1,0 +1,4 @@
+// test error demo
+global genErr genCrash;
+if genErr then sin pi; end
+if genCrash then sleep 1; end
