@@ -1,14 +1,30 @@
 function mtlb_exec(varargin)
-    select argn(2)
-        case 1 then
-            exec(varargin(1),-1);
-        case 2 then
-            exec(varargin(1),varargin(2));
-        case 3 then
-            exec(varargin(1),varargin(2),varargin(3));
-        case 4 then
-            exec(varargin(1),varargin(2),varargin(3),varargin(4));
-        else
-            error("exec_mtlb - Number of arguments exceeded")
-    end
+ nomearq = "";
+ modeFunc = -1;
+ select argn(2)
+   case 0 then
+     nomearq = uigetfile("*.*",pwd());
+   case 1 then
+     nomearq = varargin(1);
+   case 2 then
+     nomearq = varargin(1);
+     modeFunc= varargin(2);
+ end
+ [path,fname,extension]=fileparts(nomearq);
+ chdir(path);
+ if extension =='.m' then
+    //mtlb_getd(dir) - Fazer a função 
+    fd = mopen(nomearq,'rt');
+    str = mgetl(fd);
+    mclose(fd);
+    str = strsubst(str,'/[^"']%|^%/','//','r');
+    nomearq = path+"\"+fname+".sce";
+    fd = mopen(nomearq,'wt');
+    mputl(str,fd);
+    mclose(fd); 
+ else
+    getd(path);
+ end
+ exec(nomearq,modeFunc);
 endfunction
+
