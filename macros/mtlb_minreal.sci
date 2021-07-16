@@ -1,4 +1,4 @@
-function sl=minreal(varargin)
+function sl=mtlb_minreal(varargin)
    i=length(varargin);
    select i
     case 1 then  

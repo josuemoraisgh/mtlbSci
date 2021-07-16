@@ -1,4 +1,4 @@
-function close(varargin)
+function mtlb_close(varargin)
    i=length(varargin);
    select i
     case 0 then

@@ -10,7 +10,7 @@
 //
 // A diferencia de Matlab devuelve la FT sin factorizar
 
-function sys1=zpk(varargin)
+function sys1=mtlb_zpk(varargin)
    i=length(varargin);
    select i
       case 1 then                                //zpk(FT) o zpk(SS)
