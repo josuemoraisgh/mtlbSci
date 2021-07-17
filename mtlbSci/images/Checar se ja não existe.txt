@@ -1,2 +1,0 @@
-https://ftp.sun.ac.za/ftp/pub/mirrors/scilab/www.scilab.org/product/dic-mat-sci/SCI2M.htm
-https://help.scilab.org/doc/6.0.0/en_US/section_36184e52ee88ad558380be4e92d3de21.html
