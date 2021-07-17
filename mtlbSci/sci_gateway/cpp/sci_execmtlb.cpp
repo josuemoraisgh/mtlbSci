@@ -68,7 +68,7 @@ void closeFile(std::ifstream* file, int fileId, const std::wstring& wstFile, ast
     }
 }
 /*--------------------------------------------------------------------------*/
-types::Function::ReturnValue sci_exec(types::typed_list &in, int _iRetCount, types::typed_list &out)
+types::Function::ReturnValue sci_execmtlb(types::typed_list &in, int _iRetCount, types::typed_list &out)
 {
     int promptMode      = 0;//default value at startup, overthise 3 or verbose ";"
     int iErr            = 0;
