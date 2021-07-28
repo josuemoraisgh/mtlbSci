@@ -1,57 +1,70 @@
 function retorno = startModule()
-    global %MTLBSCIPath
-    
+    global %MTLBSCIPath   
     mprintf("Start " + TOOLBOX_TITLE + "\n");
-    
+
     if isdef(TOOLBOX_NAME+"lib") then
         warning(TOOLBOX_NAME+"lib is already loaded");
         return;
     end
 
-    etc_path  = getshortpathname(get_absolute_file_path(TOOLBOX_NAME+".start"));
-    root_path = strncpy(etc_path,length(etc_path)-length("\etc\"));
+    etc_path  = get_absolute_file_path(TOOLBOX_NAME+".start");
+    root_path = fullpath(etc_path+'..'+filesep());
     %MTLBSCIPath = root_path;
-    
+    imagePath = fullpath(root_path+'images'+filesep());
+    fd = mopen(imagePath+'funInSciSameNewFun.txt','rt');
+    mgetl(fd,1);  
+    while ~meof(fd) do
+        fun =  tokens(mgetl(fd,1)," ");
+        if ~exists(fun(1)) then
+            absptr=funptr(fun(2));// get the function_ptr associated with the function
+            newfun(fun(1),absptr);// create an alias of the new function
+            clearfun(fun(2));
+        end
+    end;
+    mclose(fd);
+
     //Load  functions library
     mprintf("\tLoad macros\n");
     macros_path = pathconvert(root_path)+"macros"+filesep();
     retorno = lib(macros_path);
     
     // load gateways and Java libraries
-    verboseMode = ilib_verbose();
-    ilib_verbose(0);
-    mprintf("\tLoad gateways\n");
-    exec(pathconvert(root_path+"/sci_gateway/loader_gateway.sce",%f));
-    mprintf("\tLoad Java libraries\n");
-    exec(pathconvert(root_path+"/src/java/loader.sce",%f));
-    ilib_verbose(verboseMode);
+    //verboseMode = ilib_verbose();
+    //ilib_verbose(0);
+    //mprintf("\tLoad gateways\n");
+    //exec(pathconvert(root_path+"/sci_gateway/loader_gateway.sce",%f));
+    //mprintf("\tLoad Java libraries\n");
+    //exec(pathconvert(root_path+"/src/java/loader.sce",%f));
+    //ilib_verbose(verboseMode);
     
     // load localization
-    addlocalizationdomain(TOOLBOX_NAME, root_path + "/locales");
+    //addlocalizationdomain(TOOLBOX_NAME, root_path + "/locales");
     
     // Load and add help chapter
-    if or(getscilabmode() == ["NW";"STD"]) then
-        mprintf("\tLoad help\n");
-        addchapter_path = pathconvert(root_path+"/jar");
-        if isdir(addchapter_path) then
-            add_help_chapter(TOOLBOX_NAME, addchapter_path, %F);
-        end
-    end
+    //if or(getscilabmode() == ["NW";"STD"]) then
+    //    mprintf("\tLoad help\n");
+    //    addchapter_path = pathconvert(root_path+"/jar");
+    //    if isdir(addchapter_path) then
+    //        add_help_chapter(TOOLBOX_NAME, addchapter_path, %F);
+    //    end
+    //end
     
     // Load demos
-    if or(getscilabmode() == ["NW";"STD"]) then
-        mprintf("\tLoad demos\n");
-        demos_path = pathconvert(root_path+"/demos/dem.gateway.sce", %F, %T);
-        add_demo(TOOLBOX_TITLE, demos_path);
-    end
+    //if or(getscilabmode() == ["NW";"STD"]) then
+    //    mprintf("\tLoad demos\n");
+    //    demos_path = pathconvert(root_path+"/demos/dem.gateway.sce", %F, %T);
+    //    add_demo(TOOLBOX_TITLE, demos_path);
+    //end
     
     // Load Preferences GUI
-    if getscilabmode() == "STD" then
-        addModulePreferences(TOOLBOX_TITLE,root_path,etc_path + "preferences.xml");
-    end
+    //if getscilabmode() == "STD" then
+    //    addModulePreferences(TOOLBOX_TITLE,root_path,etc_path + "preferences.xml");
+    //end
 endfunction
-global %MTLBSCIPath TOOLBOX_NAME TOOLBOX_TITLE
+global %MTLBMODE %MTLBSCIPath TOOLBOX_NAME TOOLBOX_TITLE
+%MTLBMODE = "sci";
 TOOLBOX_NAME  = "mtlbSci";
 TOOLBOX_TITLE = "Mtlb Sci";
 mtlbScilib = startModule();
-clear startModule TOOLBOX_NAME TOOLBOX_TITLE;
+clear startModule 
+clearglobal TOOLBOX_NAME TOOLBOX_TITLE;

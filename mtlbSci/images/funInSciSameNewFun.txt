@@ -1,0 +1,2 @@
+NewFun     SciFunName
+execold    exec

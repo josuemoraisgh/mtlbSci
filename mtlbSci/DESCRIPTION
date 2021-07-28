@@ -14,19 +14,19 @@
 // Unique identifier for this toolbox.
 // It must be alphanumeric, start with a letter and contain neither space
 // nor special characters other than underscore or dash.
-Toolbox: toolbox_rltool
+Toolbox: toolbox_mtlbsci
 
 // Human-friendly name for your toolbox
-Title: Toolbox Rltool
+Title: Toolbox MtlbSci
 
 // One-line description for your toolbox
-Summary: Ferramenta para controle que envolve o lugar das Raizes de Evans 
+Summary: Ferramenta que permite rodar codigos do Matlab no Scilab 
 
 // Version number, in format 'major.minor.patch', or
 // 'major.minor.patch', where all fields are numbers.
 // If you are just starting your toolbox, you should use '0.1' or '0.1.0'.
 // Use '1.0' or '1.0.0' for a tested, good quality first version.
-Version: 0.4.0
+Version: 0.1.0
 
 // Name(s) of the author(s) of this toolbox.
 // They are usually the original copyright holders
