@@ -1,0 +1,48 @@
+changelog of the xls-link toolbox
+
+0.4.1 - 2017
+* use the Scilab build system (instead of using Visual Studio directly)
+* add support of Scilab 6
+* refactor and fix all unit tests
+
+0.3.2 - 2013
+* fix trouble with AddWorkbook function.
+* fix Windows 32 bits crashes
+
+0.3.1 - 2013
+* add generic functions to set/get properties and call method.
+* rewriting almost all functions with generic functions.
+* add management of named range ( "myrange" <=> "A1:C3" ) in all functions that use range.
+* add capabilitiy to call embedded macro in opened Excel document with or without arguments.
+* add some tools functions to handle ranges ( xls_ExtendRange, xls_OffsetRange, xls_GetRange ).
+* functions that use range information can be called without range argument, in this case selected range will be used.
+* fully documented with samples and tests.
+
+0.3 - 2011
+* documentation
+* Compatibility with Scilab 5.3
+* Support for 64 bit (scilab 32 bit - office 64 bit , and Scilab 64 bit - office 32 bit)
+* support of Macros Excel
+
+
+0.2 - 2010
+* %nan returns NaN in Excel
+
+* VARIANT types managed :
+  VT_I2, VT_I4, VT_R4, VT_R8, VT_CY,
+  VT_I1, VT_UI1, VT_UI2, VT_UI4, VT_I8,
+  VT_UI8, VT_INT, VT_UINT as double in scilab
+
+  VT_BOOLEAN as boolean in scilab
+
+  VT_BSTR as string in scilab
+
+* Add UNICODE support
+* Add support for Excel 2010
+* Add 64 bits support for Excel 2010
+* update to api_scilab
+* first version for ATOMS
+
+0.1 - 2008
+ -- Author <allan.cornet@scilab.org>
+

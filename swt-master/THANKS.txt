@@ -1,0 +1,13 @@
+SWT - Scilab Wavelet Toolbox THANKS file
+
+SWT has originally been written by Roger Liu <rogeruclan@gmail.com>
+
+Isaac Zhi
+   Compiled the SWT toolbox for GNU/Linux, using gcc.
+   Compiled the SWT toolbox for Windows.
+       E-MAIL: QFWFQzhi@gmail.com
+
+
+Holge Nahrstaedt
+	porting the toolbox to scilab 5
+        adding some funtions

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from detcoef.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="detcoef" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>detcoef</refname>
+    <refpurpose>1-D detail coefficients extraction</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>D :</term>
+            <listitem><para> reconstructed detail coefficient</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L :</term>
+            <listitem><para> length array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> restruction level with N&lt;=length(L)-2</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+detcoef is for extraction of detail coeffient at different level
+after a multiple level decompostion. Extension mode is stored as
+a global variable and could be changed with dwtmode. If N is omitted,
+the detail coefficients will extract at the  maximum level (length(L)-2).
+   </para>
+   <para>
+The length of D depends on the level N.
+   </para>
+   <para>
+C and L can be generated using wavedec.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+X = wnoise(4,10,0.5); //doppler with N=1024
+[C,L]=wavedec(X,3,'db2');
+D2=detcoef(C,L,2);
+scf();clf();
+subplot(211);
+plot(X,'r');
+subplot(212);
+plot(D2);
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

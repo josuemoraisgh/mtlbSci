@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_OffsetRange" xml:lang="en">
+    <refnamediv>
+        <refname>xls_OffsetRange</refname>
+        <refpurpose>Add offset to a range.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>newRange = xls_OffsetRange(range, row, col)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>range</term>
+                <listitem>
+                    <para>Range to add offset.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>row</term>
+                <listitem>
+                    <para>Row offset.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>col</term>
+                <listitem>
+                    <para>Col offset.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Outputs</title>
+        <variablelist>
+            <varlistentry>
+                <term>newRange</term>
+                <listitem>
+                    <para>Return new string range ("C3:D6").</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Add offset to a range.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible();
+            newRange = xls_OffsetRange("A1:B4", 2, 3)
+            xls_SelectRange(newRange);
+            xls_SetData('New range');
+            sleep(1000);
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_CalculateRange">xls_CalculateRange</link>
+            </member>
+            <member>
+                <link linkend="xls_GetRange">xls_GetRange</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

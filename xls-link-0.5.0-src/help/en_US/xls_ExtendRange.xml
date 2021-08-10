@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_ExtendRange" xml:lang="en">
+    <refnamediv>
+        <refname>xls_ExtendRange</refname>
+        <refpurpose>Change dimension of an Excel range.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>r = xls_ExtendRange(iRow, iCol)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>iRow</term>
+                <listitem>
+                    <para>Number of lines in the new range.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>iCol</term>
+                <listitem>
+                    <para>Number of columns in the new range.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Close the workbook.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible();
+            xls_SetData('A1','Test Extend');
+            sleep(1000);
+            xls_ExtendRange(5,5);
+            xls_SetData('Extended');
+            sleep(1000);
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_CalculateRange">xls_CalculateRange</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

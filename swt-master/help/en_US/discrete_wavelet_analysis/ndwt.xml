@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from ndwt.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="ndwt" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>ndwt</refname>
+    <refpurpose>Nondecimated 1-D wavelet transform</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname :</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db20"), coiflets ("coif1" to "coif5"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> double vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> Level of decomposition</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>extMethod :</term>
+            <listitem><para> extension mode, 'zpd' for example</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>W:</term>
+            <listitem><para>ndwt structure</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+ndwt performs a multilevel nondecimate decomposition. W is a structure with W.rowvect, W.level, W.mode, W.filters, W.dec, W.longs.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+t = linspace(0,1,1000);
+x = 4*sin(4*%pi*t);
+x = x - sign(t - .3) - sign(.72 - t);
+W = ndwt(x,4,'db2','mode','per');
+d1 = indwt(W,'d',1);
+scf();
+subplot(211);
+plot(t,x); title('Original Signal');
+subplot(212);
+plot(t,d1,'linewidth',2); title('Wavelet Approximation -- Level 1');
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>H. Nahrstaedt - 2013</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

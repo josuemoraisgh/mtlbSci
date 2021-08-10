@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wrcoef.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wrcoef" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wrcoef</refname>
+    <refpurpose>Restruction from single branch from multiple level decomposition</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>type :</term>
+            <listitem><para> approximation or detail, 'a' or 'd'.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>wname :</term>
+            <listitem><para> wavelet name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> vector of reconstructed coefficents</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_R :</term>
+            <listitem><para> lowpass synthesis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_R :</term>
+            <listitem><para> highpass syntheis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L :</term>
+            <listitem><para> length array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> restruction level with length(L)-2&gt;=N</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wrcoef is for reconstruction from single branch of multiple level
+decomposition from 1-D wavelet coefficients. Extension mode is stored as a global variable
+and could be changed with dwtmode. If N is omitted, maximum level (length(L)-2) is used.
+   </para>
+   <para>
+The wavelet coefficents C and L can be generated using wavedec.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(1,100);
+[C,L]=wavedec(x,3,'db2');
+x0=wrcoef('a',C,L,'db2',2);
+
+//
+// wrcoef can be used to generate the detail and the approximation until the given level
+lvl=3;wname="db2";
+X = wnoise(4,10,0.5); //doppler with N=2^10 and Noise
+[C,L] = wavedec(X,lvl,wname);
+
+A=zeros(lvl,length(X));D=zeros(A);
+for i = 1:lvl
+A(i,:) = wrcoef('a',C,L,wname,i);
+D(i,:) = wrcoef('d',C,L,wname,i);
+end
+scf();clf();
+subplot(2,1,1)
+plot(X,'k')
+plot(A')
+subplot(2,1,2)
+plot(D');
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wavedec">wavedec</link></member>
+   <member><link linkend="waverec">waverec</link></member>
+   <member><link linkend="upcoef">upcoef</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

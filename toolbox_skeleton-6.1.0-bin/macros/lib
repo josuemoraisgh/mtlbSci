@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scilablib name="toolbox_skeletonlib">
+  <macro name="scilab_error" file="scilab_error.bin" md5="14e66a81d83db4cd15374685a8509758"/>
+  <macro name="scilab_sum" file="scilab_sum.bin" md5="6087e869c36263cfe6d87ff3a9a810fe"/>
+</scilablib>

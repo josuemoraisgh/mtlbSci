@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a0424d01c987aae6a29ba6c685f20a789 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/continuous_wavelet_analysis/cwt.xml">
+<!ENTITY a7da2571a61f875fa9dccdb035358f46f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/continuous_wavelet_analysis/cwtplot.xml">
+<!ENTITY ab985cf20a0c56861b01ea1c9d6c8b813 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/ddencmp.xml">
+<!ENTITY a3b463ca5e88ac07105ac49fb33e3ea14 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/thselect.xml">
+<!ENTITY ae3afbf606f66605d1e4e330d07b55fb0 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wbmpen.xml">
+<!ENTITY a5be04a8904258a38c2b6c315432e309a SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wden.xml">
+<!ENTITY a7cabc951803ebd73f070b23bfab7230c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wdencmp.xml">
+<!ENTITY a847d792a1ba7e057a8c6100c76e1b22d SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wnoise.xml">
+<!ENTITY a66fd718e3b15656ef9c33be4e7039131 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wnoisest.xml">
+<!ENTITY a9d76f06f6491ef30fcc0a83859b07c37 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/denoising/wthresh.xml">
+<!ENTITY ad8973d092de540572e5556afdebaef1d SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/FSfarras.xml">
+<!ENTITY afa9bffe8790052d10b19463e983a077e SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/appcoef.xml">
+<!ENTITY a37e3d5741db5637fd67a86f93d1713fd SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/appcoef2.xml">
+<!ENTITY a8583aa0ed6fa7e84ed4e1d347db8f2d2 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/cplxdual2D.xml">
+<!ENTITY a833f00e5ad405a39e86617326162e84c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/detcoef.xml">
+<!ENTITY adf8831c5f1e61bfdde1ab8a15456e868 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/detcoef2.xml">
+<!ENTITY a72a17c1d644f0a379bd8086539f15503 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dualfilt1.xml">
+<!ENTITY a4b9af5175ee4af6b5918e4d8ff8d88df SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dualtree.xml">
+<!ENTITY a035bb4a06df767c34b30d612fe590eb4 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dualtree2D.xml">
+<!ENTITY a0f72a1b4157dd8bfda5511b112b07172 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dwt.xml">
+<!ENTITY a9696962ff6bf8778ec308925314d7fb7 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dwt2.xml">
+<!ENTITY ab3556ae29f63909964a6f28c068ac4be SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dwt3.xml">
+<!ENTITY a8444633db5eb87b3097b7382188cfba9 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dwtmode.xml">
+<!ENTITY a29df3387fd6b1e99138706c044a0ebf6 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dwtplot.xml">
+<!ENTITY ac718126b8c8c4c2f5833a3f6ab298698 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dyaddown.xml">
+<!ENTITY a9b699f0b64b94cff8c1dc247de0530c4 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/dyadup.xml">
+<!ENTITY aada6f5f25830f12ab00ae52014feef90 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/iconv.xml">
+<!ENTITY a6a911baba8e44fa6ee96cd72d22a472a SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/icplxdual2D.xml">
+<!ENTITY a035f9027e4550da3da7184e603257f54 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/idualtree.xml">
+<!ENTITY af07f4e229ba1f60c7296eede6d9e2dd5 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/idualtree2D.xml">
+<!ENTITY ab009caba16d971b4b3c7f364ad2650f1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/idwt.xml">
+<!ENTITY ae5ba793afa15202cb5fd14e43db4c8c5 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/idwt2.xml">
+<!ENTITY a324b4e3a7f11d5177d73d0701bd0576f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/idwt3.xml">
+<!ENTITY a486ad12ee4f935174e09f2be32f527f7 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/ind2rgb.xml">
+<!ENTITY a841441a7aed55fa0743b46da0c854f3c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/indwt.xml">
+<!ENTITY a707727f92bd5a3c7208adf1cc1c78b9f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/indwt2.xml">
+<!ENTITY a0bc0569dcc6cb3a5f8d176fc4b571607 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/iswt.xml">
+<!ENTITY a62591bfc4bbdacd4502cfdfa72d5092c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/iswt2.xml">
+<!ENTITY af38392fc0b17a927121fa89a7919f4dc SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/ndwt.xml">
+<!ENTITY a56242b9261eabd5ba19c4b15b28a3fe7 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/ndwt2.xml">
+<!ENTITY a7a6a1633711e60f99905b577a2ac0ed1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/swt.xml">
+<!ENTITY a3eeb5a8a85f6291f88228e3da1f29d2c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/swt2.xml">
+<!ENTITY ac01eb0289862b6adf18cd7d2f5d97d62 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/upcoef.xml">
+<!ENTITY acc2cb08e898fe549cf5e457ce1b618d8 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/upcoef2.xml">
+<!ENTITY a9a08ca971f2028e841c26473b1af459d SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/upwlev.xml">
+<!ENTITY abfb7028b67ad872ac0727c2941b71cb2 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/upwlev2.xml">
+<!ENTITY a1da106cdb1ea6c1d6a3e2a2c3fc2a1bb SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wavedec.xml">
+<!ENTITY aa7a69f440a7e8e1ed4d306a307992f12 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wavedec2.xml">
+<!ENTITY aa7e007105c66b59ecbff1c9765166ca4 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wavedecplot.xml">
+<!ENTITY a1686f3e931c78592779d2c771b715675 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/waveletfamilies.xml">
+<!ENTITY a1b1c7cfa4e04bbc36063b0c49ac213d0 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/waverec.xml">
+<!ENTITY ac9c4bf20ad837b6c648618c58af62d53 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/waverec2.xml">
+<!ENTITY a7ac37adb64dd4791f89d6c1c6f1eff1e SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wcodemat.xml">
+<!ENTITY aeed380a47f44f429f2d066648d1993c3 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wenergy.xml">
+<!ENTITY a459e46b54c5273669e3b01d712699631 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wenergy2.xml">
+<!ENTITY a5ba347fdde3b6e9aedc47fe3702d8006 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wentropy.xml">
+<!ENTITY a5a1df91dc4657fdc806835dbb9a45c57 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wextend.xml">
+<!ENTITY afa3b3902001c54b4bdf898ff51e9cc72 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wkeep.xml">
+<!ENTITY acbca705eabafe20420c895595c96e362 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wmaxlev.xml">
+<!ENTITY a55dd5f07ef9d6baf3a9f1e126bbbe819 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wnorm.xml">
+<!ENTITY aa4e3202f9178627646716e96590e994b SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wrcoef.xml">
+<!ENTITY ae2b2844e6b84d2f511b85fb855525235 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wrcoef2.xml">
+<!ENTITY a01a4b82100dc5348a0cdfe4e7b68dfc3 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wrev2.xml">
+<!ENTITY ac75aa5d59d723b4765c20adb991c0139 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wrev3.xml">
+<!ENTITY ad973e0f3b348f45b45907793102abd4d SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/discrete_wavelet_analysis/wrot3.xml">
+<!ENTITY ac05fd7fa20036670b5dbfa7a6a25f82c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/biorfilt.xml">
+<!ENTITY a7ae04e939bc33e9e88609882c1d23bb6 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/biorwavf.xml">
+<!ENTITY a85e9c40a182fac38a4db8d38c6b92950 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/coifwavf.xml">
+<!ENTITY aa018063221eb26613be0af54e0e47544 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/dbwavf.xml">
+<!ENTITY ace51c85e7aa028649b8d990793c55218 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/orthfilt.xml">
+<!ENTITY a7960dcf8cff8123cefae60c1e77266c1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/qmf.xml">
+<!ENTITY ae1f6fe37612d7289861f11c6315c4c52 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/rbiorwavf.xml">
+<!ENTITY afca322dcb62df14222be4881275467ad SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/symwavf.xml">
+<!ENTITY aff407b22d7735fc4c485c3a6c0d88179 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/wavefun.xml">
+<!ENTITY acd2eb9ce3e3c9a0557694c7fc8bd6623 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/wavefun2.xml">
+<!ENTITY a22694854ffa27c53e930a5539ae112b0 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/wfilters.xml">
+<!ENTITY ac343abff0325bca8d4472d7d495415e5 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/orth_biorth_wavelets/wrev.xml">
+<!ENTITY aee47145b3a47361f2baf2c2b9c10b9c3 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/DOGauss.xml">
+<!ENTITY abceac3907d14a02e10eaddd8cd358070 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/cauwavf.xml">
+<!ENTITY ae3e61c1f5d559b7086527e7a9a8c456c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/centfrq.xml">
+<!ENTITY ae3500205fd084bc25f5ff0203f35afe1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/cgauwavf.xml">
+<!ENTITY ad487694b52ee632b6da445c4bc3947c4 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/cmorwavf.xml">
+<!ENTITY a43a6530fadfbb0e76f147af8c6d2fae6 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/fbspwavf.xml">
+<!ENTITY a623e64516332098f9a48b287e3e3dd69 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/gauswavf.xml">
+<!ENTITY af8c2a6c8d531cae5ebbdcc14977525ed SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/legdwavf.xml">
+<!ENTITY a888a08f6b6a46f3caf34cdb0968d3026 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/mexihat.xml">
+<!ENTITY a7e7f8815b5c93fd16ac54a3d806892f0 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/morlet.xml">
+<!ENTITY a2ea1649a1ee1e59989ab2d56ac682ffc SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/poisson.xml">
+<!ENTITY ac203c74cfae2d1222f33fd5d45353688 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/scal2frq.xml">
+<!ENTITY a8d6b0b010d8c811b994190a2bd2ac211 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/shanwavf.xml">
+<!ENTITY a87cd013948095a7992b8ef71d50588dd SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/swt-master/help/en_US/real_complex_wavelets/sinus.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='swt_manual'>
+    <title>swt</title>
+  </info>
+
+<part xml:id='section_789bd1983719329fe64f627e85ce6168'>
+<title>continuous_wavelet_analysis</title>
+&a0424d01c987aae6a29ba6c685f20a789;
+&a7da2571a61f875fa9dccdb035358f46f;
+</part>
+<part xml:id='section_338f69997a49a9362b6b96b0f2b77b6a'>
+<title>denoising</title>
+&ab985cf20a0c56861b01ea1c9d6c8b813;
+&a3b463ca5e88ac07105ac49fb33e3ea14;
+&ae3afbf606f66605d1e4e330d07b55fb0;
+&a5be04a8904258a38c2b6c315432e309a;
+&a7cabc951803ebd73f070b23bfab7230c;
+&a847d792a1ba7e057a8c6100c76e1b22d;
+&a66fd718e3b15656ef9c33be4e7039131;
+&a9d76f06f6491ef30fcc0a83859b07c37;
+</part>
+<part xml:id='section_38c791a40457b6dd6dfc85315ef6d2ec'>
+<title>discrete_wavelet_analysis</title>
+&ad8973d092de540572e5556afdebaef1d;
+&afa9bffe8790052d10b19463e983a077e;
+&a37e3d5741db5637fd67a86f93d1713fd;
+&a8583aa0ed6fa7e84ed4e1d347db8f2d2;
+&a833f00e5ad405a39e86617326162e84c;
+&adf8831c5f1e61bfdde1ab8a15456e868;
+&a72a17c1d644f0a379bd8086539f15503;
+&a4b9af5175ee4af6b5918e4d8ff8d88df;
+&a035bb4a06df767c34b30d612fe590eb4;
+&a0f72a1b4157dd8bfda5511b112b07172;
+&a9696962ff6bf8778ec308925314d7fb7;
+&ab3556ae29f63909964a6f28c068ac4be;
+&a8444633db5eb87b3097b7382188cfba9;
+&a29df3387fd6b1e99138706c044a0ebf6;
+&ac718126b8c8c4c2f5833a3f6ab298698;
+&a9b699f0b64b94cff8c1dc247de0530c4;
+&aada6f5f25830f12ab00ae52014feef90;
+&a6a911baba8e44fa6ee96cd72d22a472a;
+&a035f9027e4550da3da7184e603257f54;
+&af07f4e229ba1f60c7296eede6d9e2dd5;
+&ab009caba16d971b4b3c7f364ad2650f1;
+&ae5ba793afa15202cb5fd14e43db4c8c5;
+&a324b4e3a7f11d5177d73d0701bd0576f;
+&a486ad12ee4f935174e09f2be32f527f7;
+&a841441a7aed55fa0743b46da0c854f3c;
+&a707727f92bd5a3c7208adf1cc1c78b9f;
+&a0bc0569dcc6cb3a5f8d176fc4b571607;
+&a62591bfc4bbdacd4502cfdfa72d5092c;
+&af38392fc0b17a927121fa89a7919f4dc;
+&a56242b9261eabd5ba19c4b15b28a3fe7;
+&a7a6a1633711e60f99905b577a2ac0ed1;
+&a3eeb5a8a85f6291f88228e3da1f29d2c;
+&ac01eb0289862b6adf18cd7d2f5d97d62;
+&acc2cb08e898fe549cf5e457ce1b618d8;
+&a9a08ca971f2028e841c26473b1af459d;
+&abfb7028b67ad872ac0727c2941b71cb2;
+&a1da106cdb1ea6c1d6a3e2a2c3fc2a1bb;
+&aa7a69f440a7e8e1ed4d306a307992f12;
+&aa7e007105c66b59ecbff1c9765166ca4;
+&a1686f3e931c78592779d2c771b715675;
+&a1b1c7cfa4e04bbc36063b0c49ac213d0;
+&ac9c4bf20ad837b6c648618c58af62d53;
+&a7ac37adb64dd4791f89d6c1c6f1eff1e;
+&aeed380a47f44f429f2d066648d1993c3;
+&a459e46b54c5273669e3b01d712699631;
+&a5ba347fdde3b6e9aedc47fe3702d8006;
+&a5a1df91dc4657fdc806835dbb9a45c57;
+&afa3b3902001c54b4bdf898ff51e9cc72;
+&acbca705eabafe20420c895595c96e362;
+&a55dd5f07ef9d6baf3a9f1e126bbbe819;
+&aa4e3202f9178627646716e96590e994b;
+&ae2b2844e6b84d2f511b85fb855525235;
+&a01a4b82100dc5348a0cdfe4e7b68dfc3;
+&ac75aa5d59d723b4765c20adb991c0139;
+&ad973e0f3b348f45b45907793102abd4d;
+</part>
+<part xml:id='section_16f5ba56685ef8fc894db64f4cb78d75'>
+<title>orth_biorth_wavelets</title>
+&ac05fd7fa20036670b5dbfa7a6a25f82c;
+&a7ae04e939bc33e9e88609882c1d23bb6;
+&a85e9c40a182fac38a4db8d38c6b92950;
+&aa018063221eb26613be0af54e0e47544;
+&ace51c85e7aa028649b8d990793c55218;
+&a7960dcf8cff8123cefae60c1e77266c1;
+&ae1f6fe37612d7289861f11c6315c4c52;
+&afca322dcb62df14222be4881275467ad;
+&aff407b22d7735fc4c485c3a6c0d88179;
+&acd2eb9ce3e3c9a0557694c7fc8bd6623;
+&a22694854ffa27c53e930a5539ae112b0;
+&ac343abff0325bca8d4472d7d495415e5;
+</part>
+<part xml:id='section_a30486cf12fa6e2c4c81274d876a0746'>
+<title>real_complex_wavelets</title>
+&aee47145b3a47361f2baf2c2b9c10b9c3;
+&abceac3907d14a02e10eaddd8cd358070;
+&ae3e61c1f5d559b7086527e7a9a8c456c;
+&ae3500205fd084bc25f5ff0203f35afe1;
+&ad487694b52ee632b6da445c4bc3947c4;
+&a43a6530fadfbb0e76f147af8c6d2fae6;
+&a623e64516332098f9a48b287e3e3dd69;
+&af8c2a6c8d531cae5ebbdcc14977525ed;
+&a888a08f6b6a46f3caf34cdb0968d3026;
+&a7e7f8815b5c93fd16ac54a3d806892f0;
+&a2ea1649a1ee1e59989ab2d56ac682ffc;
+&ac203c74cfae2d1222f33fd5d45353688;
+&a8d6b0b010d8c811b994190a2bd2ac211;
+&a87cd013948095a7992b8ef71d50588dd;
+</part>
+</book>

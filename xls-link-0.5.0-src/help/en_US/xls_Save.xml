@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_Save" xml:lang="en">
+    <refnamediv>
+        <refname>xls_Save</refname>
+        <refpurpose>Save workbook.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_Save()</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Description</title>
+        <para>Save workbook.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible(%t);
+
+            xls_SetData("A1:C3", [%t %f %t;%f %t %f;%t %f %t]);
+            xls_Save()
+
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_SaveAs">xls_SaveAs</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

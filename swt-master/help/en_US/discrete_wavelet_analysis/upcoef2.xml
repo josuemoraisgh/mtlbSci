@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from upcoef2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="upcoef2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>upcoef2</refname>
+    <refpurpose>Two Dimension Direct Restruction</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x:</term>
+            <listitem><para> input matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>type:</term>
+            <listitem><para> approximation or detail, 'a', 'h', 'v' or 'd'.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y:</term>
+            <listitem><para> reconstruction</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_R:</term>
+            <listitem><para> lowpass synthesis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_R:</term>
+            <listitem><para> highpass syntheis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> restruction level</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>S:</term>
+            <listitem><para> desired output size vector</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+upcoef2 is for upward two dimension reconstruction from any desired input matrix.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+[cA,cH,cV,cD]=dwt2(x,'db2');
+Y=upcoef2('a',cA,'db2',1);
+Z=upcoef2('h',cH,'db2',3);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

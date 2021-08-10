@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wenergy2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wenergy2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wenergy2</refname>
+    <refpurpose>Energy Statistics from two dimension multiple level decompostion</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>Ea :</term>
+            <listitem><para> energy percentage of approximation coefficent</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Eh :</term>
+            <listitem><para> energy percentage of horizontal detail coefficent</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Ec :</term>
+            <listitem><para> energy percentage of vertical detail coefficent</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Ed :</term>
+            <listitem><para> energy percentage of diagonal detail coefficent, vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>c :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>s :</term>
+            <listitem><para> size array</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wenergy2 is to calculate the energy percentage of approximation and detail coefficent for two dimension decompostion.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+[C,S]=wavedec2(x,3,'db2');
+[Ea,Ed]=wenergy2(C,S);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

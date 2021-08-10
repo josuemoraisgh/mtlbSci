@@ -1,0 +1,35 @@
+changelog of the helptbx Scilab Toolbox
+
+0.6
+ * Unit test fixes.
+ * Check apifun toolbox dependency.
+
+0.5
+ * Support of Scilab 6.
+
+0.4
+ * Fixed helptbx_helpupdate when the <info> is not found.
+   This is for Scilab 5.4.0.
+
+0.3
+ * Fixed helptbx_helpupdate when a function is not found
+   in the macros directory: a warning is now produced.
+ * Updated helptbx_helpupdate to use apifun_argindefault.
+
+0.2
+    * Fixed ticket #273: the helptbx_helpupdate function failed to
+      generate an error message.
+    * Fixed ticket #342: Some .sci script were wrongly identified.
+    * Fixed ticket #341: The module did not load on Linux.
+    * Fixed ticket #310: The files in the generated demo gateway
+      were not sorted.
+
+
+0.1
+    * Initial version
+    * Added help and tests for helptbx_iscontentupdte.
+    * Added help and tests for helptbx_updtifneeded.
+    * Added help and tests for helptbx_helpupdate.
+ -- Michael Baudin <michael.baudin@scilab.org>  08 Feb 2011
+
+

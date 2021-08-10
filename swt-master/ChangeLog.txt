@@ -1,0 +1,107 @@
+SWT - Scilab Wavelet Toolbox
+Copyright (C) 2011 - 2014 Holger Nahrstaedt
+Copyright (C) 2005-2008 Scilab Wavelet Toolbox Team
+__________________________________________________________________
+0.3.1
+ + some bug fixes (Thanks to Pingmin)
+0.3.0
+ + Works with Scilab 6.0
+ + new and more accurate Daubechies wavelets coefficents - thanks to Bob Strunz 
+0.2.1
+ + demos fixed
+0.2.0
+ + source code reorganized
+ + ind2rgb removed, as it is already defined in the sivp toolbox
+ + the complete c-code is ported to the new scilab-api
+0.1.21
+ + Issue 1478 fixed
+ + unit tests for windows fixed
+ + strange bug in detcoef,wavedec and waverec for windows fixed
+0.1.20
+ + help files and demos improved
+ + Issue 1428 fixed
+ + first steps in porting the c-code to the new scilab-api
+0.1.19
+ + accuracy of Daubechies wavelets coefficents and Coiflet wavelets coefficients increaced
+ + db21 to db36 added
+ + coif6 to coif17 added
+ + all unit tests are working under windows
+ + help files improved
+ + ndwt,indwt,ndwt2,indwt2 added
+0.1.18
+ + update some help files
+ + bug fix in cwt.c
+0.1.17
+ + unit tests for dbwavf, gauswavf, biorwavf, rbiorwavf, shanwavf, coifwavf, cgauwavf, fbspwavf, mexihat, morlet
+ + bug fix in upcoef and upcoef2
+ + bug fix in fbspwavf, cgauwavf
+ + bug fix in upcoef and upcoef2 unit test
+ + some new demos
+0.1.16
+ + bug fix in cwt, wavefun
+ + bug fix in centfrq
+ + new demo for Differentiation of noisy Data
+ + new function waveletfamilies
+ + unit tests for wavefun and wavefun2
+ + works only for scilab5.4-beta-1 and higher
+0.1.15
+ + bug fix in thselect, wentropy
+ + help file for wentropy
+0.1.14
+ + some bug fixes in upcoef and upcoef2
+ + add 32 unit_tests
+0.1.13
+ + some minor bug fixes
+0.1.12
+ +   some bug fixes, help files are improved.
+ +  change of dir name in the tar.gz file
+0.1.11
+  + Add unit_tests, some macros are removed, some bug fixes
+0.1.10
+  + Add scal2frq, centfrq, cwtplot, wavedecplot
+0.1.9
+  + Add denoise funtions: wden, wnoisest, wthresh, wnoise, thselect, ddencmp
+0.1.8
+  + bug fixes for scilab 5, transformation of the help files
+0.1.7
+   + works under scilab 5
+0.1.0-rc6
+   + Add FSfarras, dualfilt1, dualtree, idualtree, dualtree2D, idualtree2D, cplxdual2D, icplxdual2D, wnorm
+0.1.0-rc5.5
+   + Add wrev2, wrot3, wrev3, dwt3, idwt3
+0.1.0-rc5
+   + Add db11 to db20, sym2 to sym20, bior4.4 to bior6.8
+   + Add vaidyanathan, beyklin, bathlets, legendre wavelets
+   + Add legdwavf
+   + Add iconv, wcodemat
+   + Add stationary wavelet transform utilites, swt, iswt, swt2 and iswt2
+   + Add cwt, continuous wavelet waveform generation utilites
+   + Add alpha code of Scilab Time and Freqency Toolbox, see macros folder
+0.1.0-rc4
+   + Add coiflets, symlets and b-spline bi-orthogonal wavelet
+   + Add upcoef, upcoef2, upwlev and upwlev2
+   + Adjust function input parameter patterns to be more similiar with counterpart in Matlab Wavelets
+   + Add help pages and demos
+
+0.1.0-rc3
+   + Fix function swtdwt2Dex
+   + Modify loader.sce
+   + Remove data/image/lena.bmp.  (If you need, please use SIVP's data.  SIVP's website: http://sivp.sourceforge.net )
+   + Support BSD style make.
+
+0.1.0-rc2
+   + Fix function swtdwt2Dex
+   + Add version string in loader.sce
+
+0.1.0-rc1-windows
+   + Build .dll files for windows used.
+
+0.1.0-rc1 Initial release
+   + Discrete Fast Wavelet Transform, daubechies wavelets
+   + 1-D single level signal decomposition and reconstruction
+   + 1-D multi-level signal decompostition and reconstruction
+   + 2-D single level image decomposition and reconstruction
+   + 2-D multi-level image decomposition and reconstruction
+   + help pages for all the functions.
+   + home page
+   + nice photographs

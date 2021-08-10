@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from helptbx_updtifneeded.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="helptbx_updtifneeded" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>helptbx_updtifneeded</refname>
+    <refpurpose>Update a file if this is needed.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>content :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the new content</para></listitem></varlistentry>
+   <varlistentry><term>filename :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the file to be checked.</para></listitem></varlistentry>
+   <varlistentry><term>b :</term>
+      <listitem><para> a 1-by-1 matrix of booleans</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Returns true if the <literal>filename</literal> is up-to-date, that is,
+if the file was not changed.
+Returns false if the file was changed.
+   </para>
+   <para>
+The file is to be updated according to the rules of the
+<literal>helptbx_iscontentupdte</literal> function.
+Generates an error if the file was to be changed, but that was not possible.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Create a sample file.
+content = "Coucou!";
+filename = fullfile(TMPDIR,"test.txt");
+// Update the file.
+b = helptbx_updtifneeded ( content , filename ) // Expected=%f
+// See the content of the file.
+content2 = mgetl ( filename )
+and(content==content2) // Expected=%t
+// No update is necessary now.
+b = helptbx_updtifneeded ( content , filename ) // Expected=%t
+// Change the content
+content = "Hello!";
+b = helptbx_updtifneeded ( content , filename ) // Expected=%f
+// See the content of the file.
+content2 = mgetl ( filename )
+and(content==content2) // Expected=%t
+// No update is necessary now.
+b = helptbx_updtifneeded ( content , filename ) // Expected=%t
+// Delete the file
+mdelete(filename);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Copyright (C) 2010 - 2011 - DIGITEO - Michael Baudin</member>
+   </simplelist>
+</refsection>
+</refentry>

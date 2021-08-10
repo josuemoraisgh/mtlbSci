@@ -1,0 +1,92 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>wthresh</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="wnoisest.html">&lt;&lt; wnoisest</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="section_38c791a40457b6dd6dfc85315ef6d2ec.html">discrete_wavelet_analysis &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">swt</a> &gt;&gt; <a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a> &gt; wthresh</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">wthresh</h1>
+    <p class="refpurpose">Soft or hard thresholding</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">X:</span>
+            <dd><p class="para">input data (vector or matrix)</p></dd></dt>
+        <dt><span class="term">SORH = &#0039;s&#0039;:</span>
+            <dd><p class="para">soft thresholding</p></dd></dt>
+        <dt><span class="term">SORH = &#0039;h&#0039; :</span>
+            <dd><p class="para">hard thresholding</p></dd></dt>
+        <dt><span class="term">T:</span>
+            <dd><p class="para">threshold value</p></dd></dt>
+        <dt><span class="term">Y :</span>
+            <dd><p class="para">output</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">doing either hard (if SORH = &#0039;h&#0039;) or soft (if SORH = &#0039;s&#0039;) thresholding</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabcomment">// Generate signal and set threshold.</span>
+<span class="scilabid">y</span> <span class="scilaboperator">=</span> <a class="scilabmacro" href="scilab://linspace">linspace</a><span class="scilabopenclose">(</span><span class="scilaboperator">-</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">100</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">thr</span> <span class="scilaboperator">=</span> <span class="scilabnumber">0.4</span><span class="scilabdefault">;</span>
+
+<span class="scilabcomment">// Perform hard thresholding.</span>
+<span class="scilabid">ythard</span> <span class="scilaboperator">=</span> <span class="scilabid">wthresh</span><span class="scilabopenclose">(</span><span class="scilabid">y</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">h</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabid">thr</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+
+<span class="scilabcomment">// Perform soft thresholding.</span>
+<span class="scilabid">ytsoft</span> <span class="scilaboperator">=</span> <span class="scilabid">wthresh</span><span class="scilabopenclose">(</span><span class="scilabid">y</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">s</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabid">thr</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="wden.html" class="link">wden</a> &#8212; Automatic 1-D de-noising</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Holger Nahrstaedt - 2010-2012</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="wnoisest.html">&lt;&lt; wnoisest</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="section_38c791a40457b6dd6dfc85315ef6d2ec.html">discrete_wavelet_analysis &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

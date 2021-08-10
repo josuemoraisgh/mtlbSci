@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wavedec.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wavedec" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wavedec</refname>
+    <refpurpose>Multiple level 1-D discrete fast wavelet decomposition</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname :</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> signal vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> decompostion level</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_D :</term>
+            <listitem><para> lowpass analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_D :</term>
+            <listitem><para> highpass analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C :</term>
+            <listitem><para> coefficient vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L :</term>
+            <listitem><para> length vector</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wavedec can be used for multiple-level 1-D discrete fast wavelet
+decompostion using a specific wavelet name wname or wavelet decompostion
+filters Lo_D and Hi_D. Such filters can be generated using wfilters.
+   </para>
+   <para>
+The global extension mode which can be change using dwtmode is used.
+   </para>
+   <para>
+The coefficient vector C contains the approximation coefficient at level N
+and all detail coefficient from level 1 to N
+   </para>
+   <para>
+The first entry of L is the length of the approximation coefficent,
+then the length of the detail coefficients are stored and the last
+value of L is the length of the signal vector.
+   </para>
+   <para>
+The approximation coefficient can be extracted with C(1:L(1)).
+The detail coefficients can be obtained with C(L(1):sum(L(1:2))),
+C(sum(L(1:2)):sum(L(1:3))),.... until C(sum(L(1:length(L)-2)):sum(L(1:length(L)-1))).
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+X = wnoise(4,10,0.5); //doppler with N=1024
+[C,L]=wavedec(X,3,'db2');
+scf();clf();
+subplot(511)
+plot(X,'r')
+subplot(512)
+plot(C(1:L(1)))
+subplot(513)
+plot(C(L(1):sum(L(1:2))),'g')
+subplot(514)
+plot(C(sum(L(1:2)):sum(L(1:3))),'g')
+subplot(515)
+plot(C(sum(L(1:3)):sum(L(1:4))),'g')
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="waverec">waverec</link></member>
+   <member><link linkend="wfilters">wfilters</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

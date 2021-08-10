@@ -1,0 +1,36 @@
+// ====================================================================
+// Allan CORNET
+// DIGITEO 2008 - 2010
+// ====================================================================
+// <-- JVM NOT MANDATORY --> 
+// ====================================================================
+tlbxs = atomsGetInstalled();
+if grep(tlbxs, "xls_link") <> [] then
+  atomsLoad("xls_link");
+else
+  root_path = getenv('TOOLBOX_XLS_LINK_PATH', '');
+  if root_path <> '' then 
+    exec(root_path + 'loader.sce'); 
+Start xls link (Automation) for Scilab
+	Load gateways
+	Load macros
+  end 
+end
+// ====================================================================
+ test_path = xls_getRootPath() + 'tests' + filesep() + 'unit_tests' + filesep();
+// ====================================================================
+r = xls_NewExcel();
+if r <> %t then bugmes();quit;end
+r = xls_AddWorkbook();
+if r <> %t then bugmes();quit;end
+r = xls_SetWorksheet(1);
+if r <> %t then bugmes();quit;end
+r = xls_SetVisible(%t);
+if r <> %t then bugmes();quit;end
+// edit in current Worksheet & validate
+// r =  xls_Undo(%t);
+// your modification must be removed
+// if r <> %t then bugmes();quit;end
+r = xls_SetVisible(%f);
+r = xls_Quit();
+if r <> %t then bugmes();quit;end

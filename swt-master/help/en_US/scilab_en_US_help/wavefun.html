@@ -1,0 +1,87 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>wavefun</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="symwavf.html">&lt;&lt; symwavf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_16f5ba56685ef8fc894db64f4cb78d75.html">orth_biorth_wavelets</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wavefun2.html">wavefun2 &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">swt</a> &gt;&gt; <a href="section_16f5ba56685ef8fc894db64f4cb78d75.html">orth_biorth_wavelets</a> &gt; wavefun</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">wavefun</h1>
+    <p class="refpurpose">Wavelet and Scaling Functions</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">wname:</span>
+            <dd><p class="para">wavelet name, haar( &#0034;haar&#0034;), daubechies (&#0034;db1&#0034; to &#0034;db36&#0034;), coiflets (&#0034;coif1&#0034; to &#0034;coif17&#0034;), symlets (&#0034;sym2&#0034; to &#0034;sym20&#0034;), legendre (&#0034;leg1&#0034; to &#0034;leg9&#0034;), bathlets(&#0034;bath4.0&#0034; to &#0034;bath4.15&#0034; and &#0034;bath6.0&#0034; to &#0034;bath6.15&#0034;), dmey (&#0034;dmey&#0034;), beyklin (&#0034;beylkin&#0034;), vaidyanathan (&#0034;vaidyanathan&#0034;), biorthogonal B-spline wavelets (&#0034;bior1.1&#0034; to &#0034;bior6.8&#0034;), &#0034;rbior1.1&#0034; to &#0034;rbior6.8&#0034;, Kingsbury (&#0034;ksq1&#0034;, &#0034;ksq2&#0034;), Farras (&#0034;fa1&#0034;, fa2), sinus (&#0034;sinus&#0034;), morlet (&#0034;morl&#0034;), &#0034;DOG&#0034;, &#0034;shan&#0034;, &#0034;cauchy&#0034;, cmorlet (&#0034;cmor&#0034;), poisson (&#0034;poisson&#0034;), gauss wavelet (&#0034;gaus1&#0034; to &#0034;gaus8&#0034;), complex gauss wavelet (&#0034;cgau1&#0034; to &#0034;cgau8&#0034;), mexican hat (&#0034;mexh&#0034;) and frequency B spline wavelets (&#0034;fbsp&#0034;).</p></dd></dt>
+        <dt><span class="term">ITER :</span>
+            <dd><p class="para">iteration cycle, default is 8, 10 is used frequently</p></dd></dt>
+        <dt><span class="term">PHI :</span>
+            <dd><p class="para">scaling function, some wavelets do not have scaling function</p></dd></dt>
+        <dt><span class="term">PSI :</span>
+            <dd><p class="para">wavelet function</p></dd></dt>
+        <dt><span class="term">XVAL:</span>
+            <dd><p class="para">time domain grid</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">wavefun is an utility to get scaling function phi and wavelet function psi. For orthogonal wavelets, both phi and psi are available. For biorthogonal wavelets, two scaling functions and wavelet function could be obtained. For some wavelets, only wavelet function is available.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">phi</span><span class="scilabdefault">,</span><span class="scilabid">psi</span><span class="scilabdefault">,</span><span class="scilabid">xval</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">wavefun</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">sym4</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabnumber">10</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">phi1</span><span class="scilabdefault">,</span><span class="scilabid">psi1</span><span class="scilabdefault">,</span><span class="scilabid">phi2</span><span class="scilabdefault">,</span><span class="scilabid">psi2</span><span class="scilabdefault">,</span><span class="scilabid">xval</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">wavefun</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">bior3.3</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabnumber">8</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">psi</span><span class="scilabdefault">,</span><span class="scilabid">xval</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">wavefun</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">mexh</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabnumber">8</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Roger Liu and Isaac Zhi</li>
+   <li class="member">Copyright (C) 2010-2015 - Holger Nahrstaedt</li></ul></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="symwavf.html">&lt;&lt; symwavf</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_16f5ba56685ef8fc894db64f4cb78d75.html">orth_biorth_wavelets</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wavefun2.html">wavefun2 &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

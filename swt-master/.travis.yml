@@ -1,0 +1,22 @@
+dist: bionic
+language: cpp
+os:
+  - linux
+  - osx
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y scilab; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install homebrew/cask-versions/adoptopenjdk8; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew cask install scilab; fi
+
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scilab -version; true; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then '/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab' -version; true; fi
+script:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scilab -nw -e 'result = exec("builder.sce", "errcatch"); exit(result)'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then scilab -nwni -e 'result = exec("loader.sce", "errcatch"); exec("runtests.sce", "errcatch"); exit(result)'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cd /home/travis/build/holgern/; mv /home/travis/build/holgern/swt /home/travis/build/holgern/swt_0.3.1; tar cfvz /home/travis/build/holgern/swt_0.3.1-0.bin.x86_64.linux.tar.gz /home/travis/build/holgern/swt_0.3.1; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then '/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab' -nw -e 'result = exec("builder.sce", "errcatch"); exit(result)'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then '/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab' -nwni -e 'result = exec("loader.sce", "errcatch"); exec("runtests.sce", "errcatch"); exit(result)'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then '/Applications/Scilab-6.0.2.app/Contents/MacOS/bin/scilab' -nwni -e 'result = exec("cleaner.sce", "errcatch"); exit(result)'; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ..; mv swt swt_0.3.1; tar cfvz swt_0.3.1-0.bin.x86_64.darwin.tar.gz swt_0.3.1; fi

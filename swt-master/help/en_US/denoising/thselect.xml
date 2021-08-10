@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from thselect.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="thselect" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>thselect</refname>
+    <refpurpose>Threshold selection for de-noising</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X:</term>
+            <listitem><para> input vector with scaled white noise (N(0,1))</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR:</term>
+            <listitem><para> defines selection rules for thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR = 'rigrsure':</term>
+            <listitem><para> adaptive threshold selection using principle of Stein's Unbiased Risk Estimate.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR = 'heursure':</term>
+            <listitem><para> heuristic variant of the first option.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR = 'sqtwolog':</term>
+            <listitem><para> threshold is sqrt(2*log(length(X))).</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR = 'minimaxi':</term>
+            <listitem><para> minimax thresholding.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>THR :</term>
+            <listitem><para> threshold X-adapted value using selection rule defined by string TPTR</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Threshold selection for de-noising. The algorithm works only if the signal X has a white noise of N(0,1). Dealing with unscaled or nonwhite noise can be handled using rescaling of the threshold.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+init = 2055415866; rand('seed',init);
+x = rand(1,1000,'normal');
+
+thr = thselect(x,'rigrsure')
+
+thr = thselect(x,'sqtwolog')
+
+thr = thselect(x,'heursure')
+
+thr = thselect(x,'minimaxi')
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wden">wden</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

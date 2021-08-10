@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from ddencmp.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="ddencmp" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>ddencmp</refname>
+    <refpurpose>Default values for de-noising or compression</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X:</term>
+            <listitem><para> double vector or matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>IN1:</term>
+            <listitem><para> IN1 is 'den' for de-noising or 'cmp' for compression.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>IN2:</term>
+            <listitem><para> IN2 is 'wv' for wavelet or 'wp' for wavelet packet.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>CRIT:</term>
+            <listitem><para> entropy name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>KEEPAPP:</term>
+            <listitem><para> keep aproximation coefficients</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SORH:</term>
+            <listitem><para> hard / soft thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>THR:</term>
+            <listitem><para> threshold</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+ddencmp gives default values for all the general procedures related to de-noising and compression of one- or two-dimensional signals, using wavelets or wavelet packets.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+init = 2055415866; rand('seed',init);
+x = rand(1,1000,'normal');
+[thr,sorh,keepapp] = ddencmp('den','wv',x)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="waverec">waverec</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>H. Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

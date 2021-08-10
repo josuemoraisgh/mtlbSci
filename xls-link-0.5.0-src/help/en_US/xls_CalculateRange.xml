@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_CalculateRange" xml:lang="en">
+    <refnamediv>
+        <refname>xls_CalculateRange</refname>
+        <refpurpose>calculate a excel range</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>Range = xls_CalculateRange(FirstCell, Dimensions)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>FirstCell</term>
+                <listitem>
+                    <para>a string first cell position</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Dimensions</term>
+                <listitem>
+                    <para>a vector of 2 dimensions of matrix to calculate range</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Range</term>
+                <listitem>
+                    <para>a string: range calculated</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Calculates a excel range with a startup cell position and size of a matrix.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_CalculateRange('A1',[1 1])
+            xls_CalculateRange('A1',[1 2])
+            xls_CalculateRange('A1',[2 2])
+            ver_excel_num = strtod(xls_GetExcelVersion());
+            if ver_excel_num > 11 then
+            max_cell_xls = "XFD1048576";
+            else
+            max_cell_xls = "IV65536";
+            end
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_OffsetRange">xls_OffsetRange</link>
+            </member>
+            <member>
+                <link linkend="xls_GetRange">xls_GetRange</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

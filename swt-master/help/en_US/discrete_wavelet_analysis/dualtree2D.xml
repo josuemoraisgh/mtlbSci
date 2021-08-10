@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from dualtree2D.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="dualtree2D" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>dualtree2D</refname>
+    <refpurpose>Real 2D dualtree wavelet transform</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> input matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>J :</term>
+            <listitem><para> decomposition level</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Faf:</term>
+            <listitem><para> first stage analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>af :</term>
+            <listitem><para> further stage analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>c :</term>
+            <listitem><para> complex decomposition coefficient, real part for one tree and imainery part for another tree</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>s :</term>
+            <listitem><para> coefficient size matrix</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+dualtree2D is an utility function of real 2D dualtree wavelet transform. Refer to Professor Ivan Selesnick's webpage at Brooklyn Polytech, NY.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[Faf,Fsf]=FSfarras('f');
+[af,sf]=dualfilt1('f');
+x=rand(256,256);
+[c,s]=dualtree2D(x,3,Faf,af);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

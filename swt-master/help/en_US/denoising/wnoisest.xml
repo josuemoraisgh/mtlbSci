@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wnoisest.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wnoisest" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wnoisest</refname>
+    <refpurpose>Estimate noise of 1-D wavelet coefficients</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>S:</term>
+            <listitem><para> estimate noise for this decompostion levels</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C:</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L:</term>
+            <listitem><para> length array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>STDC:</term>
+            <listitem><para> STDC(k) is an estimate of the standard deviation of C_k</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+estimates of the detail coefficients' standard deviation for levels contained in the input vector S
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+init = 2055415866; rand('seed',init);
+x = rand(1,1000,'normal');
+[c,l] = wavedec(x,2,'db3');
+
+wnoisest(c,l,1:2)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wavedec">wavedec</link></member>
+   <member><link linkend="wden">wden</link></member>
+   <member><link linkend="thselect">thselect</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

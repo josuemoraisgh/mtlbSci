@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_GetFont" xml:lang="en">
+    <refnamediv>
+        <refname>xls_GetFont</refname>
+        <refpurpose>Get range font property.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>propertyValue = xls_GetFont([fontProperty])</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>fontProperty</term>
+                <listitem>
+                    <para>if this parameter is not specificied, "name" is used.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+        <title>Outputs</title>
+        <variablelist>
+            <varlistentry>
+                <term>propertyValue</term>
+                <listitem>
+                    <para>Return the font property value.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Get range font property.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+
+            xls_GetFont()
+            xls_GetFont("name")
+            xls_GetFont("underline")
+            xls_GetFont("bold")
+            xls_GetFont("size")
+
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_CalculateRange">xls_CalculateRange</link>
+            </member>
+            <member>
+                <link linkend="xls_OffsetRange">xls_OffsetRange</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

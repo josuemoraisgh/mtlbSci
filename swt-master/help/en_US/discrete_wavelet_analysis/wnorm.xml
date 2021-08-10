@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wnorm.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wnorm" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wnorm</refname>
+    <refpurpose>Matrix Normalization</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> input double matrix or vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>MIN :</term>
+            <listitem><para> minimum</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>MAX :</term>
+            <listitem><para> maximum</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M :</term>
+            <listitem><para> normalized matrix with value ranging from MIN to MAX.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wnorm is an utility to normalize a matrix for displaying
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+m=wnorm(x);
+imshow(m); // funtion provided by SIP or SIVP toolbox
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

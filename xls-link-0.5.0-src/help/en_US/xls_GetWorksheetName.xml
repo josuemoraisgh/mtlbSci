@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_GetWorksheetName" xml:lang="en">
+    <refnamediv>
+        <refname>xls_GetWorksheetName</refname>
+        <refpurpose>Get current worksheet name.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>sheetName = xls_GetWorksheetName()</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Output</title>
+        <variablelist>
+            <varlistentry>
+                <term>sheetName</term>
+                <listitem>
+                    <para>Returns current worksheet name.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Get current worksheet name.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+
+            x = xls_AddWorksheet();
+            
+            for i = 1:x
+                xls_SetWorksheet(i);
+                xls_GetWorksheetName()
+            end
+            
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_SetWorksheetName">xls_SetWorksheetName</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

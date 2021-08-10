@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wentropy.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wentropy" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wentropy</refname>
+    <refpurpose>Entropy</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> vector or matrix input</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>P:</term>
+            <listitem><para> Parameter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T:</term>
+            <listitem><para> Entropy name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T="shannon" :</term>
+            <listitem><para> P is not used</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T='log energy':</term>
+            <listitem><para> P is not used</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T='threshold':</term>
+            <listitem><para> 0&lt;=P, P is the threshold</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T='sure':</term>
+            <listitem><para> 0&lt;=P, P is the threshold</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T='norm':</term>
+            <listitem><para>1&lt;=P, P is the power</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+performs a entropy calculation of type T for  X.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+//Generate random signal.
+X = rand(1,200,'norm');
+
+//Compute Shannon entropy
+E = wentropy(X,'shannon')
+
+//Compute log energy entropy
+E = wentropy(X,'log energy')
+
+//Compute threshold (P=0.2) entropy
+E = wentropy(X,'threshold',0.2)
+
+//Compute Sure entropy with a treshold P=3
+E = wentropy(X,'sure',3)
+
+//Compute norm entropy  with power = 1.1.
+E = wentropy(X,'norm',1.1)
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>H. Nahrstaedt - 2012</member>
+   </simplelist>
+</refsection>
+</refentry>

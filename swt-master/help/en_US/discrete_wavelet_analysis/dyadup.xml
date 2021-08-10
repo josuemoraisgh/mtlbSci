@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from dyadup.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="dyadup" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>dyadup</refname>
+    <refpurpose>dyadic upsampling</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> double vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M :</term>
+            <listitem><para> double matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>EVEN_ODD :</term>
+            <listitem><para> even or odd integer</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>type :</term>
+            <listitem><para> upsampling manner, 'r' for row, 'c' for column, and 'm' for row and column simutaneously.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y :</term>
+            <listitem><para> upsampling result</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+dyadup is an utility function for dyadic upsampling. if EVEN_ODD is even, zeors will be put between input entries and output length will be two times input length minus one. Otherwise, additional two zeros will be put at the head and tail of output so the output length will be two times input length plus one. Default is odd. Optional argumet type is especially for matrix input upsampling.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+a=rand(1,100);
+Y=dyadup(a);
+b=rand(25,25);
+Y=dyadup(b,'r',0);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

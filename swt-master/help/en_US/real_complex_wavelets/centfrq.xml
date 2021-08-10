@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from centfrq.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="centfrq" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>centfrq</refname>
+    <refpurpose>Wavelet center frequency</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet function name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>iter:</term>
+            <listitem><para> number of iteration used by wavefun</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>cfreq:</term>
+            <listitem><para> center frequency of the wavelet function</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Estimations the center frequency of a wavelet function.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+wname = 'db2';iter=8;
+// Compute the center frequency
+cfreq = centfrq(wname,iter)
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="scal2frq">scal2frq</link></member>
+   <member><link linkend="wavefun">wavefun</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

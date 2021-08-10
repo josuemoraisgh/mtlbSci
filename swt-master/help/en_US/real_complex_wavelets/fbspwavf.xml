@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from fbspwavf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="fbspwavf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>fbspwavf</refname>
+    <refpurpose>complex frequency B spline wavelet</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>LB :</term>
+            <listitem><para> low bound</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>UB :</term>
+            <listitem><para> upper bound</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N  :</term>
+            <listitem><para> number of data points</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M  :</term>
+            <listitem><para> order integer</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FB :</term>
+            <listitem><para> Bandwith</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FC :</term>
+            <listitem><para> center frequency</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PSI:</term>
+            <listitem><para> complex wavelet</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> time grid</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+fbspwavf is an utility to get complex frequency B Spline wavelet waveform.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[PSI,X]=fbspwavf(-20,20,1001,2,1,1.5);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

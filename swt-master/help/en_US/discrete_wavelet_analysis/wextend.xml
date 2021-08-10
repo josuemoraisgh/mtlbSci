@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wextend.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wextend" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wextend</refname>
+    <refpurpose>signal extension</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> double vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M :</term>
+            <listitem><para> double matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L :</term>
+            <listitem><para> length integer</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>type :</term>
+            <listitem><para> extraction manner, 'l' for left, 'r' for right, and 'b' for both left and right</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>sizeVector :</term>
+            <listitem><para> integer vector containing row and column size to extend</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>typeString :</term>
+            <listitem><para> string for extension, 'bb', 'll', 'rr', 'bl', 'lb', 'br', 'rb', 'lr', 'rl'.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>typeStringVector :</term>
+            <listitem><para> string vector for extension, ['b' 'b'], ['l' 'l'], ['r' 'r'], ['b' 'l'], ['l' 'b'], ['b' 'r'], ['r' 'b'], ['r' 'l'], ['l' 'r'].</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>extMode :</term>
+            <listitem><para> extension method, 'symh'('sym'), 'symw', 'asymh', 'asymw', 'zpd', 'zpd', 'per', 'ppd'.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>row_col :</term>
+            <listitem><para> adding row or adding column, 'ar' or 'addrow' for row, 'ac' or 'addcol' for column.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>onedim :</term>
+            <listitem><para> one dimension indication, 1, '1', '1d' and '1D'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>twodim :</term>
+            <listitem><para> two dimension indication, 2, '2', '2d' and '2D'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y :</term>
+            <listitem><para> extension result</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wextend is an utility function for signal extension.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+a=rand(1,100);
+Y=wextend(1,'symh',a,5,'b');
+b=rand(25,25);
+Y=wextend(2,'symh',b,[3,5],'lb');
+Y=wextend('ar','symh',b,3,'r');
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

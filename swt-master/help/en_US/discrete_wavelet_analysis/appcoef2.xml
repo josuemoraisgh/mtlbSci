@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from appcoef2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="appcoef2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>appcoef2</refname>
+    <refpurpose>2-D approximation coefficients extraction</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname  :</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>A :</term>
+            <listitem><para> extracted approximation coefficients</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_R :</term>
+            <listitem><para> lowpass synthesis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_R :</term>
+            <listitem><para> highpass syntheis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>S :</term>
+            <listitem><para> size array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> restruction level with N&lt;=length(L)-2</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+appcoef2 can be used for extraction or reconstruction of approximation coeffient
+at  level N  after a multiple level decompostion. Extension mode is stored as a global variable and
+could be changed with dwtmode. If N is omitted, the maximum level (length(L)-2) is used.
+   </para>
+   <para>
+The length of A depends on the level N.
+   </para>
+   <para>
+C and L can be generated using wavedec2.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+load(get_swt_path()+"demos/image/woman.dat");
+[C,S]=wavedec2(X,3,'db2');
+A1=appcoef2(C,S,'db2',1);
+A2=appcoef2(C,S,'db2',2);
+A3=appcoef2(C,S,'db2',3);
+scf();clf();
+f=gcf();f.color_map=graycolormap(256);
+subplot(221)
+Matplot(X);
+a=gca();a.tight_limits="on";
+title("original");
+subplot(222)
+Matplot(A1);
+a=gca();a.tight_limits="on";
+title("approximation level 1");
+subplot(223)
+Matplot(A2);
+a=gca();a.tight_limits="on";
+title("approximation level 2");
+subplot(224)
+Matplot(A3);
+a=gca();a.tight_limits="on";
+title("approximation level 3");
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

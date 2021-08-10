@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from helptbx_iscontentupdte.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="helptbx_iscontentupdte" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>helptbx_iscontentupdte</refname>
+    <refpurpose>Check if a content matches a file.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>content :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the new content</para></listitem></varlistentry>
+   <varlistentry><term>filename :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the file to be checked</para></listitem></varlistentry>
+   <varlistentry><term>b :</term>
+      <listitem><para> a 1-by-1 matrix of booleans</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Returns true if the <literal>filename</literal> is up-to-date, that is,
+if the file does not require to be changed.
+The file is to be updated if one of the following conditions is satisfied.
+<itemizedlist>
+<listitem>
+The file does not exist.
+</listitem>
+<listitem>
+The file exists, but its content is not equal to <literal>content</literal>.
+The content comparison ignores the leading and trailing blanks.
+</listitem>
+</itemizedlist>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Create a sample file.
+content = "Coucou!";
+filename = fullfile(TMPDIR,"test.txt");
+// See if the content is to be updated.
+b = helptbx_iscontentupdte ( content , filename )
+expected = %f
+// Fill the file
+mputl ( content , filename );
+// See if the file is to be updated.
+b = helptbx_iscontentupdte ( content , filename )
+expected = %t
+// Change the content
+content = "Hello!"
+b = helptbx_iscontentupdte ( content , filename )
+expected = %f
+// Delete the file
+mdelete(filename);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Copyright (C) 2010 - 2011 - DIGITEO - Michael Baudin</member>
+   </simplelist>
+</refsection>
+</refentry>

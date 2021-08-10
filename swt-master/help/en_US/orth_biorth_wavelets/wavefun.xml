@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wavefun.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wavefun" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wavefun</refname>
+    <refpurpose>Wavelet and Scaling Functions</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8", Kingsbury ("ksq1", "ksq2"), Farras ("fa1", fa2), sinus ("sinus"), morlet ("morl"), "DOG", "shan", "cauchy", cmorlet ("cmor"), poisson ("poisson"), gauss wavelet ("gaus1" to "gaus8"), complex gauss wavelet ("cgau1" to "cgau8"), mexican hat ("mexh") and frequency B spline wavelets ("fbsp").</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ITER :</term>
+            <listitem><para> iteration cycle, default is 8, 10 is used frequently</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PHI :</term>
+            <listitem><para> scaling function, some wavelets do not have scaling function</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PSI :</term>
+            <listitem><para> wavelet function</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>XVAL:</term>
+            <listitem><para> time domain grid</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wavefun is an utility to get scaling function phi and wavelet function psi. For orthogonal wavelets, both phi and psi are available. For biorthogonal wavelets, two scaling functions and wavelet function could be obtained. For some wavelets, only wavelet function is available.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[phi,psi,xval]=wavefun('sym4',10);
+[phi1,psi1,phi2,psi2,xval]=wavefun('bior3.3',8);
+[psi,xval]=wavefun('mexh',8);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_AddWorkbook" xml:lang="en">
+    <refnamediv>
+        <refname>xls_AddWorkbook</refname>
+        <refpurpose>Creates a new workbook</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>bOK = xls_AddWorkbook()</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Outputs</title>
+        <variablelist>
+            <varlistentry>
+                <term>bOK</term>
+                <listitem>
+                    <para>%t if new workbook added</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Creates a new worbook. The new workbook becomes the active workbook.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_AddWorksheet">xls_AddWorksheet</link>
+            </member>
+            <member>
+                <link linkend="xls_Close">xls_Close</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wrcoef2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wrcoef2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wrcoef2</refname>
+    <refpurpose>Restruction from single branch from two dimension multiple level decompstion</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>type :</term>
+            <listitem><para> approximation or detail, 'a', 'h', 'v' or 'd'.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>wname :</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> reconstruction</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_R :</term>
+            <listitem><para> lowpass synthesis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_R :</term>
+            <listitem><para> highpass syntheis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>c :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>s :</term>
+            <listitem><para> size array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> restruction level</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wrcoef2 is for reconstruciton from single branch of two dimension multiple level decompostion. Extension mode is stored as a global variable and could be changed with dwtmode. If N is omitted, maximum level is used.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+[C,S]=wavedec2(x,3,'db2');
+A2=wrcoef2('a',C,S,'db2',2);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

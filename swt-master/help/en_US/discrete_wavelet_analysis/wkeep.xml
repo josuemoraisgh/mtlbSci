@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wkeep.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wkeep" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wkeep</refname>
+    <refpurpose>signal extraction</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> double vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M :</term>
+            <listitem><para> double matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L :</term>
+            <listitem><para> length integer</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>type:</term>
+            <listitem><para> extraction manner, 'l' for left, 'r' for right, and 'c' for center</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FIRST:</term>
+            <listitem><para> index integer from which extraction starts.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>S :</term>
+            <listitem><para> size integer vector containing row size and column size wanted</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>indexVector :</term>
+            <listitem><para> row and column index integer vector from which extraction starts.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y :</term>
+            <listitem><para> extraction result</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wkeep is an utility function for both vector and matrix extraction. For vector extraction, extractions will be aligned to the right, left or center based on optional argument type. So does matrix extraction.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+X=(1:8)'*(1:8);
+Y=wkeep(X,[4 4]);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

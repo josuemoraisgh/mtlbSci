@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_CallMacro" xml:lang="en">
+    <refnamediv>
+        <refname>xls_CallMacro</refname>
+        <refpurpose>Call an Excel macro.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>r = xls_CallMacro(macroName, ...)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>macroName</term>
+                <listitem>
+                    <para>Excel macro name.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>...</term>
+                <listitem>
+                    <para>Arguments to pass to the macro.</para>
+                    <para>Must be double, string or boolean scalar variable.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Close the workbook.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            test_path = xls_getRootPath() + 'tests' + filesep() + 'unit_tests' + filesep();
+            xls_Open(test_path+'xls_CallMacro.xls');
+            xls_SetWorksheet(1);
+            r = xls_SetData("A1", "");
+
+            xls_CallMacro("Sheet1.TestMacro1");
+            xls_GetData("A1")
+
+            xls_CallMacro("Sheet1.TestMacro2", "TestMacro2");
+            xls_GetData("A1")
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+</refentry>

@@ -1,0 +1,43 @@
+Toolbox: xls_link
+
+Title: xls link
+
+Summary: xls_link (Automation link with Excel) A easy way to call excel(TM) from Scilab
+
+Version: 0.5.0
+
+Author: Allan CORNET
+ Antoine ELIAS
+
+Maintainer: Antoine Elias <antoine.elias@scilab-enterprises.com>
+ Clement David <clement.david@esi-group.com>
+ Simon Marchetto <simon.marchetto@scilab-enterprises.com>
+
+Category: Windows Tools
+
+Entity: Scilab Enterprises
+
+WebSite: http://forge.scilab.org/index.php/p/xls-link/
+
+URL: http://atoms.scilab.org/toolboxes/xls_link/0.4
+
+License: CeCILL
+
+ScilabVersion: any
+
+Depends: 
+
+Date: 2017-03-02 09:51:00
+
+Description: xls_link (Automation link with Excel) A easy way to use excel(TM) from Scilab
+
+ 0.5 - 2020
+ * port to Scilab 6.1
+ * add a demo to list opened documents
+ 
+ 0.4 - 2017
+ * use the Scilab build system (instead of using Visual Studio directly)
+ * add support of Scilab 6
+ * refactor and fix all unit tests
+
+HasNativeCode: Yes

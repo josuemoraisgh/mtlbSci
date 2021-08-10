@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wrot3.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wrot3" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wrot3</refname>
+    <refpurpose>3D matrix rotation</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>x :</term>
+            <listitem><para> double 3D matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M:</term>
+            <listitem><para> M is for rotation direction: 0 is for null rotation (row, col, slice), 1 for (column,row,slice), 2 for (row, slice, column), 3 for (slice, row, column), 4 for (column, slice, row), 5 for (slice, column, row).</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> forward or reverse, 0 for forward, 1 for reverse.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y:</term>
+            <listitem><para> fliping result</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wrot3 is a 3D matrix rotation utility function on time domain. wrot3(X,M,0) is for rotation on the direction indicated by M and could be converted back by wrot3(wrot3(X,M,0),M,1).
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+a=rand(3,3,3);
+Y=wrot3(a,2,0);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,14 @@
+loader.sce
+cleaner.sce
+unloader.sce
+
+*.bak
+
+macros/lib
+macros/names
+macros/*.bin
+
+jar/
+
+help/en_US/scilab_en_US_help/
+help/en_US/master_help.xml

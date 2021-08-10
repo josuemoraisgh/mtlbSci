@@ -1,0 +1,76 @@
+// Copyright (C) 2009 - 2011 - INRIA - Michael Baudin
+//
+// This file must be used under the terms of the GNU Lesser General Public License license :
+// http://www.gnu.org/copyleft/lesser.html
+
+
+
+function root_tlbx = loadlibhelptbx ()
+    modulename = "Helptbx";
+    verbose_at_startup = %f;
+
+    mprintf("Start %s\n",modulename);
+
+    if ~atomsIsInstalled("apifun") then
+        warning(msprintf("Toolbox ""%s"" is required and is not installed.\n", "apifun"));
+    end
+
+    etc_tlbx  = get_absolute_file_path("helptbx.start");
+    etc_tlbx = getshortpathname(etc_tlbx);
+    root_tlbx = strncpy( etc_tlbx, length(etc_tlbx)-length("\etc\") );
+
+    // Load macros
+    if (verbose_at_startup) then
+        mprintf("\tLoad macros\n");
+    end
+    pathmacros = pathconvert( root_tlbx ) + "macros" + filesep();
+    libhelptbx = lib(pathmacros);
+
+    // Load gateways
+    if ( %f ) then
+        if (verbose_at_startup) then
+            mprintf("\tLoad gateways\n");
+        end
+        ilib_verbose(0);
+        exec(pathconvert(root_tlbx+"/sci_gateway/loader_gateway.sce",%f));
+    end
+
+    // Load help
+    if or(getscilabmode() == ["NW";"STD"]) then
+        if (verbose_at_startup) then
+            mprintf("\tLoad help\n");
+        end
+        path_addchapter = pathconvert(root_tlbx+"/jar");
+        if ( isdir(path_addchapter) <> [] ) then
+            add_help_chapter(modulename, path_addchapter, %F);
+        end
+    end
+
+    // Add demos
+    if or(getscilabmode() == ["NW";"STD"]) then
+        if (verbose_at_startup) then
+            mprintf("\tLoad demos\n");
+        end
+        pathdemos = pathconvert(root_tlbx+"/demos/helptbx.dem.gateway.sce",%f,%t);
+        add_demo(modulename,pathdemos);
+    end
+
+    // Welcome message
+    if (verbose_at_startup) then
+        mprintf("\tType ""help nisp_overview"" for quick start.\n");
+        mprintf("\tType ""demo_gui()"" and search for ""%s"" for Demonstrations.\n",modulename);
+    end
+
+    // Create variables at level #0
+    libhelptbx = resume(libhelptbx)
+endfunction
+
+if ( isdef("libhelptbx") ) then
+    warning("Library is already loaded (""ulink(); clear libhelptbx;"" to unload.)");
+    return;
+end
+
+loadlibhelptbx();
+clear loadlibhelptbx;
+
+

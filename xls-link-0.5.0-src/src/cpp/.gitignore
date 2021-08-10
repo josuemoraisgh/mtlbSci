@@ -1,0 +1,14 @@
+Makelib.mak
+
+lib*.c
+lib*.def
+lib*.dll
+lib*.lib
+lib*.exp
+
+Debug
+Release
+
+cleaner.sce
+loader.sce
+

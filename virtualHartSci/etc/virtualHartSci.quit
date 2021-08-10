@@ -1,0 +1,33 @@
+function quitModule()
+    TOOLBOX_NAME  = "virtualHartSci";
+    
+    etc_path  = getshortpathname(get_absolute_file_path(TOOLBOX_NAME+".quit"));
+    root_path = strncpy(etc_path,length(etc_path)-length("\etc\"));
+
+    //unlink libraries
+    [bOK, ilib] = c_link(TOOLBOX_NAME+'_cpp');
+    if bOK then
+        ulink(ilib);
+    end
+
+    [bOK, ilib] = c_link(TOOLBOX_NAME+'_c');
+    if bOK then
+        ulink(ilib);
+    end
+
+    [bOK, ilib] = c_link(TOOLBOX_NAME+'_fortran');
+    if bOK then
+        ulink(ilib);
+    end
+
+    // Remove Preferences GUI
+    // =============================================================================
+    if getscilabmode() == "STD" then
+        removeModulePreferences(root_path);
+    end
+
+endfunction
+
+quitModule();
+clear quitModule;
+

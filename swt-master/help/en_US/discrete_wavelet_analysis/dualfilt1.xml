@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from dualfilt1.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="dualfilt1" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>dualfilt1</refname>
+    <refpurpose>Second Stage Filters</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>c :</term>
+            <listitem><para> flag, 'f' for full, 'a' for analysis and 's' for synthesis</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>af :</term>
+            <listitem><para> analysis filter, 4x10 matrix, real branch low and high pass filters and imagery branch low and high pass filters</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>sf :</term>
+            <listitem><para> synthesis filter</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+dualfilt1 is an utility function for obtaining second and further stage filters for dualtree complex wavelet transform. Refer to Professor Ivan Selesnick's webpage at Brooklyn Polytech, NY.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[af,sf]=dualfilt1('f');
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

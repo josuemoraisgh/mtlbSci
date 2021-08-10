@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE toc PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN" "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem target="index" text="swt">
+<tocitem target="section_789bd1983719329fe64f627e85ce6168" text="continuous_wavelet_analysis">
+<tocitem target="cwt" text="cwt"/>
+<tocitem target="cwtplot" text="cwtplot"/>
+</tocitem>
+<tocitem target="section_338f69997a49a9362b6b96b0f2b77b6a" text="denoising">
+<tocitem target="ddencmp" text="ddencmp"/>
+<tocitem target="thselect" text="thselect"/>
+<tocitem target="wbmpen" text="wbmpen"/>
+<tocitem target="wden" text="wden"/>
+<tocitem target="wdencmp" text="wdencmp"/>
+<tocitem target="wnoise" text="wnoise"/>
+<tocitem target="wnoisest" text="wnoisest"/>
+<tocitem target="wthresh" text="wthresh"/>
+</tocitem>
+<tocitem target="section_38c791a40457b6dd6dfc85315ef6d2ec" text="discrete_wavelet_analysis">
+<tocitem target="FSfarras" text="FSfarras"/>
+<tocitem target="appcoef" text="appcoef"/>
+<tocitem target="appcoef2" text="appcoef2"/>
+<tocitem target="cplxdual2D" text="cplxdual2D"/>
+<tocitem target="detcoef" text="detcoef"/>
+<tocitem target="detcoef2" text="detcoef2"/>
+<tocitem target="dualfilt1" text="dualfilt1"/>
+<tocitem target="dualtree" text="dualtree"/>
+<tocitem target="dualtree2D" text="dualtree2D"/>
+<tocitem target="dwt" text="dwt"/>
+<tocitem target="dwt2" text="dwt2"/>
+<tocitem target="dwt3" text="dwt3"/>
+<tocitem target="dwtmode" text="dwtmode"/>
+<tocitem target="dwtplot" text="dwtplot"/>
+<tocitem target="dyaddown" text="dyaddown"/>
+<tocitem target="dyadup" text="dyadup"/>
+<tocitem target="iconv" text="iconv"/>
+<tocitem target="icplxdual2D" text="icplxdual2D"/>
+<tocitem target="idualtree" text="idualtree"/>
+<tocitem target="idualtree2D" text="idualtree2D"/>
+<tocitem target="idwt" text="idwt"/>
+<tocitem target="idwt2" text="idwt2"/>
+<tocitem target="idwt3" text="idwt3"/>
+<tocitem target="ind2rgb" text="ind2rgb"/>
+<tocitem target="indwt" text="indwt"/>
+<tocitem target="indwt2" text="indwt2"/>
+<tocitem target="iswt" text="iswt"/>
+<tocitem target="iswt2" text="iswt2"/>
+<tocitem target="ndwt" text="ndwt"/>
+<tocitem target="ndwt2" text="ndwt2"/>
+<tocitem target="swt" text="swt"/>
+<tocitem target="swt2" text="swt2"/>
+<tocitem target="upcoef" text="upcoef"/>
+<tocitem target="upcoef2" text="upcoef2"/>
+<tocitem target="upwlev" text="upwlev"/>
+<tocitem target="upwlev2" text="upwlev2"/>
+<tocitem target="wavedec" text="wavedec"/>
+<tocitem target="wavedec2" text="wavedec2"/>
+<tocitem target="wavedecplot" text="wavedecplot"/>
+<tocitem target="waveletfamilies" text="waveletfamilies"/>
+<tocitem target="waverec" text="waverec"/>
+<tocitem target="waverec2" text="waverec2"/>
+<tocitem target="wcodemat" text="wcodemat"/>
+<tocitem target="wenergy" text="wenergy"/>
+<tocitem target="wenergy2" text="wenergy2"/>
+<tocitem target="wentropy" text="wentropy"/>
+<tocitem target="wextend" text="wextend"/>
+<tocitem target="wkeep" text="wkeep"/>
+<tocitem target="wmaxlev" text="wmaxlev"/>
+<tocitem target="wnorm" text="wnorm"/>
+<tocitem target="wrcoef" text="wrcoef"/>
+<tocitem target="wrcoef2" text="wrcoef2"/>
+<tocitem target="wrev2" text="wrev2"/>
+<tocitem target="wrev3" text="wrev3"/>
+<tocitem target="wrot3" text="wrot3"/>
+</tocitem>
+<tocitem target="section_16f5ba56685ef8fc894db64f4cb78d75" text="orth_biorth_wavelets">
+<tocitem target="biorfilt" text="biorfilt"/>
+<tocitem target="biorwavf" text="biorwavf"/>
+<tocitem target="coifwavf" text="coifwavf"/>
+<tocitem target="dbwavf" text="dbwavf"/>
+<tocitem target="orthfilt" text="orthfilt"/>
+<tocitem target="qmf" text="qmf"/>
+<tocitem target="rbiorwavf" text="rbiorwavf"/>
+<tocitem target="symwavf" text="symwavf"/>
+<tocitem target="wavefun" text="wavefun"/>
+<tocitem target="wavefun2" text="wavefun2"/>
+<tocitem target="wfilters" text="wfilters"/>
+<tocitem target="wrev" text="wrev"/>
+</tocitem>
+<tocitem target="section_a30486cf12fa6e2c4c81274d876a0746" text="real_complex_wavelets">
+<tocitem target="DOGauss" text="DOGauss"/>
+<tocitem target="cauwavf" text="cauwavf"/>
+<tocitem target="centfrq" text="centfrq"/>
+<tocitem target="cgauwavf" text="cgauwavf"/>
+<tocitem target="cmorwavf" text="cmorwavf"/>
+<tocitem target="fbspwavf" text="fbspwavf"/>
+<tocitem target="gauswavf" text="gauswavf"/>
+<tocitem target="legdwavf" text="legdwavf"/>
+<tocitem target="mexihat" text="mexihat"/>
+<tocitem target="morlet" text="morlet"/>
+<tocitem target="poisson" text="poisson"/>
+<tocitem target="scal2frq" text="scal2frq"/>
+<tocitem target="shanwavf" text="shanwavf"/>
+<tocitem target="sinus" text="sinus"/>
+</tocitem>
+</tocitem>
+</toc>

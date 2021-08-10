@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_SaveAs" xml:lang="en">
+    <refnamediv>
+        <refname>xls_SaveAs</refname>
+        <refpurpose>Save workbook.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_SaveAs(fileName[, password])</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>fileName</term>
+                <listitem>
+                    <para>Path to the file.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>password</term>
+                <listitem>
+                    <para>The password to be given to open (and to write into) the file.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Save the workbook to a file.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible(%t);
+
+            xls_SetData("A1:C3", [%t %f %t;%f %t %f;%t %f %t]);
+            xls_SaveAs(TMPDIR + "/file.xls")
+
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_Save">xls_Save</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

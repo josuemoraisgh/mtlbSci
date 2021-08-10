@@ -1,0 +1,115 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>wden</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="wbmpen.html">&lt;&lt; wbmpen</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wdencmp.html">wdencmp &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">swt</a> &gt;&gt; <a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a> &gt; wden</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">wden</h1>
+    <p class="refpurpose">Automatic 1-D de-noising</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">X:</span>
+            <dd><p class="para">input vector</p></dd></dt>
+        <dt><span class="term">C:</span>
+            <dd><p class="para">coefficent array</p></dd></dt>
+        <dt><span class="term">L:</span>
+            <dd><p class="para">length array</p></dd></dt>
+        <dt><span class="term">wname:</span>
+            <dd><p class="para">wavelet name</p></dd></dt>
+        <dt><span class="term">N:</span>
+            <dd><p class="para">decompostion level</p></dd></dt>
+        <dt><span class="term">SCAL:</span>
+            <dd><p class="para">threshold rescaling</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;one&#0039; for no rescaling</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;sln&#0039; for rescaling using a single estimation of level noise based on first-level coefficients</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;mln&#0039; for rescaling done using level-dependent estimation of level noise</p></dd></dt>
+        <dt><span class="term">SORH:</span>
+            <dd><p class="para">(&#0039;s&#0039; or &#0039;h&#0039;) soft or hard thresholding</p></dd></dt>
+        <dt><span class="term">TPTR:</span>
+            <dd><p class="para">threshold selection rule</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;rigrsure&#0039; uses the principle of Stein&#0039;s Unbiased Risk.</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;heursure&#0039; is an heuristic variant of the first option.</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;sqtwolog&#0039; for universal threshold</p></dd></dt>
+        <dt><span class="term">:</span>
+            <dd><p class="para">&#0039;minimaxi&#0039; for minimax thresholding</p></dd></dt>
+        <dt><span class="term">CXD:</span>
+            <dd><p class="para">de-noised coefficent array</p></dd></dt>
+        <dt><span class="term">LXD:</span>
+            <dd><p class="para">de-noised length array</p></dd></dt>
+        <dt><span class="term">XD:</span>
+            <dd><p class="para">de-noised signal</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">wden performs an automatic de-noising process of a one-dimensional signal using wavelets.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">snr</span> <span class="scilaboperator">=</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span> <span class="scilabid">init</span> <span class="scilaboperator">=</span> <span class="scilabnumber">2055615866</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">xref</span><span class="scilabdefault">,</span><span class="scilabid">x</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">wnoise</span><span class="scilabopenclose">(</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">11</span><span class="scilabdefault">,</span><span class="scilabid">snr</span><span class="scilabdefault">,</span><span class="scilabid">init</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">level</span> <span class="scilaboperator">=</span> <span class="scilabnumber">5</span><span class="scilabdefault">;</span>
+<span class="scilabid">xd</span> <span class="scilaboperator">=</span> <span class="scilabid">wden</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">heursure</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">s</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">one</span><span class="scilabstring">&#0039;</span><span class="scilabdefault">,</span><span class="scilabid">level</span><span class="scilabdefault">,</span><span class="scilabstring">&#0039;</span><span class="scilabstring">sym8</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="thselect.html" class="link">thselect</a> &#8212; Threshold selection for de-noising</li>
+   <li class="member"><a href="wthresh.html" class="link">wthresh</a> &#8212; Soft or hard thresholding</li>
+   <li class="member"><a href="wavedec.html" class="link">wavedec</a> &#8212; Multiple level 1-D discrete fast wavelet decomposition</li></ul></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Holger Nahrstaedt</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="wbmpen.html">&lt;&lt; wbmpen</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wdencmp.html">wdencmp &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

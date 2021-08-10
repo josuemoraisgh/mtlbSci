@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wnoise.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wnoise" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wnoise</refname>
+    <refpurpose>Noisy wavelet test data</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> vector length of X = 2^N</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FUN :</term>
+            <listitem><para> </para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 1 or 'blocks'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 2 or 'bumps'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 3 or 'heavy sine'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 4 or 'doppler'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 5 or 'quadchirp'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> FUN = 6 or 'mishmash'</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>INIT:</term>
+            <listitem><para> generator seed is set to INIT value.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SQRT_SNR:</term>
+            <listitem><para> sets std(X) = SQRT_SNR</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X:</term>
+            <listitem><para> test data</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>XN:</term>
+            <listitem><para> noisy test data (rand(1,N,'normal') is added!)</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Noisy wavelet test data
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[x,noisyx] = wnoise(4,10,7);
+ind = linspace(0,1,2^10);
+for i = 1:6
+x = wnoise(i,10);
+subplot(6,1,i), plot(ind,x)
+end
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wden">wden</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

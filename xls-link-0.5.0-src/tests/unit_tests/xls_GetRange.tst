@@ -1,0 +1,72 @@
+// ====================================================================
+// Antoine ELIAS
+// Scilab Enterprises 2013
+// ====================================================================
+// <-- CLI SHELL MODE -->
+// ====================================================================
+
+function check_GetRange(offset, dims, expected_range_string, expected_range_mat)
+    if dims <> [] then
+        rows = dims(1);
+        cols = dims(2);
+        if offset <> "" then
+            r =  xls_GetRange(offset, rows, cols);
+            assert_checkequal(r, expected_range_string);
+            [x, y, w, h] = xls_GetRange(offset, rows, cols);
+            assert_checkequal([x, y, w, h], expected_range_mat);
+        else
+            r =  xls_GetRange(rows, cols);
+            assert_checkequal(r, expected_range_string);
+            [x, y, w, h] = xls_GetRange(rows, cols);
+            assert_checkequal([x, y, w, h], expected_range_mat);
+        end
+    else
+        if offset <> "" then
+            r =  xls_GetRange(offset);
+            assert_checkequal(r, expected_range_string);
+            [x, y, w, h] = xls_GetRange(offset);
+            assert_checkequal([x, y, w, h], expected_range_mat);
+        else
+            r =  xls_GetRange();
+            assert_checkequal(r, expected_range_string);
+            [x, y, w, h] = xls_GetRange();
+            assert_checkequal([x, y, w, h], expected_range_mat);
+        end
+    end
+    //check current range was not changed
+    assert_checkequal(xls_GetRange(), "A1");
+endfunction
+
+r = xls_NewExcel();
+assert_checktrue(r);
+
+r = xls_AddWorkbook();
+assert_checkfalse(r == 0);
+
+// get current range information
+check_GetRange("", [], "A1", [1,1,1,1]);
+
+//get new range with width and height
+check_GetRange("", [5, 10], "A1:J5", [1,1,10,5]);
+
+check_GetRange("", [10, 5], "A1:E10", [1,1,5,10]);
+
+//get new range with origin, width and height
+check_GetRange("A1", [5, 10], "A1:J5", [1,1,10,5]);
+
+check_GetRange("A1", [10, 5], "A1:E10", [1,1,5,10]);
+
+check_GetRange("B2", [5, 10], "B2:K6", [2,2,10,5]);
+
+check_GetRange("B2", [10, 5], "B2:F11", [2,2,5,10]);
+
+//get range information from string range
+check_GetRange("A1:J5", [], "A1:J5", [1,1,10,5]);
+
+r = xls_SetSave(%t);
+assert_checktrue(r);
+r = xls_Close();
+assert_checktrue(r);
+r = xls_Quit();
+assert_checktrue(r);
+

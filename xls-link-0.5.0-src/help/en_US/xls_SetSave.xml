@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_SetSave" xml:lang="en">
+    <refnamediv>
+        <refname>xls_SetSave</refname>
+        <refpurpose>Force save status.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_SetSave(flag)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>flag</term>
+                <listitem>
+                    <para>save status %t or 1 and %f or 0.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Force modified status.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible(%t);
+
+            xls_SetData("C2", "text");
+
+            xls_SetSave(%t);
+            xls_SetSave(1);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_Save">xls_Save</link>
+            </member>
+            <member>
+                <link linkend="xls_SaveAs">xls_SaveAs</link>
+            </member>
+            <member>
+                <link linkend="xls_Close">xls_Close</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from cmorwavf.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="cmorwavf" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>cmorwavf</refname>
+    <refpurpose>complex morlet wavelet</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>LB :</term>
+            <listitem><para> low bound</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>UB :</term>
+            <listitem><para> upper bound</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N  :</term>
+            <listitem><para> number of data points</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FB :</term>
+            <listitem><para> positive bandwidth parameter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>FC :</term>
+            <listitem><para> wavelet center frequency</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PSI:</term>
+            <listitem><para> wavelet</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>X  :</term>
+            <listitem><para> time grid</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+cmorwavf is an utility to get complex morlet wavelet waveform.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[PSI,X]=cmorwavf(-8,8,1000,1.5,1);
+// Plot complex Morlet wavelet.
+subplot(211)
+plot(X,real(PSI)),
+title('Complex Morlet wavelet cmor1.5-1')
+xlabel('Real part'), xgrid()
+subplot(212)
+plot(X,imag(PSI))
+xlabel('Imaginary part'),  xgrid()
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

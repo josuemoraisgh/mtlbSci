@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wden.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wden" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wden</refname>
+    <refpurpose>Automatic 1-D de-noising</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X:</term>
+            <listitem><para> input vector</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C:</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>L:</term>
+            <listitem><para> length array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> decompostion level</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SCAL:</term>
+            <listitem><para> threshold rescaling</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'one' for no rescaling</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'sln' for rescaling using a single estimation of level noise based on first-level coefficients</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'mln' for rescaling done using level-dependent estimation of level noise</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SORH:</term>
+            <listitem><para> ('s' or 'h') soft or hard thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>TPTR:</term>
+            <listitem><para> threshold selection rule</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para>'rigrsure' uses the principle of Stein's Unbiased Risk.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'heursure' is an heuristic variant of the first option.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'sqtwolog' for universal threshold</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>:</term>
+            <listitem><para> 'minimaxi' for minimax thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>CXD:</term>
+            <listitem><para> de-noised coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>LXD:</term>
+            <listitem><para> de-noised length array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>XD:</term>
+            <listitem><para> de-noised signal</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wden performs an automatic de-noising process of a one-dimensional signal using wavelets.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+snr = 3; init = 2055615866;
+[xref,x] = wnoise(3,11,snr,init);
+level = 5;
+xd = wden(x,'heursure','s','one',level,'sym8');
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="thselect">thselect</link></member>
+   <member><link linkend="wthresh">wthresh</link></member>
+   <member><link linkend="wavedec">wavedec</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from helptbx_helpupdate.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="helptbx_helpupdate" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>helptbx_helpupdate</refname>
+    <refpurpose>Update the help and the demos from the .sci files.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+   <varlistentry><term>funarray :</term>
+      <listitem><para> a m-by-1 matrix of strings, the list of functions to update</para></listitem></varlistentry>
+   <varlistentry><term>helpdir :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the help directory</para></listitem></varlistentry>
+   <varlistentry><term>macrosdir :</term>
+      <listitem><para> a 1-by-1 matrix of strings, the macros directory</para></listitem></varlistentry>
+   <varlistentry><term>demosdir :</term>
+      <listitem><para> a 1-by-1 matrix of strings (default demosir=[]), the demonstration directory</para></listitem></varlistentry>
+   <varlistentry><term>modulename:</term>
+      <listitem><para> a 1-by-1 matrix of strings (default modulename=""), the name of the module to update</para></listitem></varlistentry>
+   <varlistentry><term>verbose:</term>
+      <listitem><para> a 1-by-1 matrix of booleans (default verbose = %f), verbose = %t prints messages</para></listitem></varlistentry>
+   <varlistentry><term>nbxmlfiles :</term>
+      <listitem><para> a 1-by-1 matrix of floating point integers, the number of xml files updated.</para></listitem></varlistentry>
+   <varlistentry><term>isdemgwutd :</term>
+      <listitem><para> a 1-by-1 matrix of booleans, isdemgwutd==[] if demosdir is empty, isdemgwutd is true if demodir is non-empty and the demonstration gateway was not change, isdemgwutd is false if demodir is non-empty and the demonstration gateway was changed.</para></listitem></varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Update the .xml help files and the demos scripts
+from the macros corresponding to the function array
+of strings funarray.
+The existing .xml files in the help dir which
+correspond to file in the funarray are overwritten (Caution !).
+Generates the .xml and the .sce files from the help_from_sci function.
+   </para>
+   <para>
+Generates a demonstration gateway.
+If demosdir is an empty matrix, do not generate the demonstrations.
+The name of the demonstration gateway is computed from the modulename variable.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Update the help of this module.
+path = helptbx_getpath (  );
+helpdir = fullfile(path,"help","en_US");
+funmat = [
+"helptbx_helpupdate"
+"helptbx_iscontentupdte"
+"helptbx_updtifneeded"
+];
+macrosdir = fullfile(path,"macros");
+demosdir = fullfile(path,"demos");
+modulename = "helptbx";
+[nbxmlfiles , isdemgwutd] = helptbx_helpupdate ( funmat , helpdir , macrosdir , demosdir , modulename , %t )
+
+// Do not print messages.
+[nbxmlfiles , isdemgwutd] = helptbx_helpupdate ( funmat , helpdir , macrosdir , demosdir , modulename )
+
+// Do not update demos.
+[nbxmlfiles , isdemgwutd] = helptbx_helpupdate ( funmat , helpdir , macrosdir )
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Copyright (C) 2012 - Michael Baudin</member>
+   <member>Copyright (C) 2010 - 2011 - DIGITEO - Michael Baudin</member>
+   </simplelist>
+</refsection>
+</refentry>

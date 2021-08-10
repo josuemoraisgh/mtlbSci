@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_RecoverExcel" xml:lang="en">
+    <refnamediv>
+        <refname>xls_RecoverExcel</refname>
+        <refpurpose>Reconnect an existing Excel.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_RecoverExcel()</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Description</title>
+        <para>Reconnect an existing Excel.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            if xls_IsExcelRunning() == %f then
+                xls_NewExcel();
+            else
+                xls_RecoverExcel();
+            end
+
+            xls_AddWorkbook();
+            xls_SetSave(%t);
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_IsExcelRunning">xls_IsExcelRunning</link>
+            </member>
+            <member>
+                <link linkend="xls_Quit">xls_Quit</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

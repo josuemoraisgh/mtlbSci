@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wthresh.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wthresh" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wthresh</refname>
+    <refpurpose>Soft or hard thresholding</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X:</term>
+            <listitem><para> input data (vector or matrix)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SORH = 's':</term>
+            <listitem><para> soft thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SORH = 'h' :</term>
+            <listitem><para> hard thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>T:</term>
+            <listitem><para> threshold value</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y :</term>
+            <listitem><para> output</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+doing either hard (if SORH = 'h') or soft (if SORH = 's') thresholding
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Generate signal and set threshold.
+y = linspace(-1,1,100);
+thr = 0.4;
+
+// Perform hard thresholding.
+ythard = wthresh(y,'h',thr);
+
+// Perform soft thresholding.
+ytsoft = wthresh(y,'s',thr);
+
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wden">wden</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wdencmp.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wdencmp" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wdencmp</refname>
+    <refpurpose>De-noising or compression using wavelets.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> input signal (1-D or 2-D)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>C,L:</term>
+            <listitem><para>wavelet decomposition structure</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>THR :</term>
+            <listitem><para> positive threshold</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>XC:</term>
+            <listitem><para> de-noised or compressed version of X</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>[CXC,LXC]:</term>
+            <listitem><para> wavelet decomposition  of XC</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PERFL2 and PERF0:</term>
+            <listitem><para> are L^2 recovery and compression   scores in percentages.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>PERFL2:</term>
+            <listitem><para> PERFL2 = 100*(vector-norm of CXC/vector-norm of C)^2</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N:</term>
+            <listitem><para> level of Wavelet decomposition</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>'wname':</term>
+            <listitem><para> is a string containing the wavelet name.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SORH('s' or 'h')  :</term>
+            <listitem><para> soft or hard thresholding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>KEEPAPP:</term>
+            <listitem><para> = 1, approximation coefficients cannot be   thresholded, otherwise it is possible.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>'gbl':</term>
+            <listitem><para>  using one threshold value</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>'lvd':</term>
+            <listitem><para> level-dependent  thresholds (THR must be of length N). For 2-D case THR must be a matrix of size 3 by N in the three orientations   horizontal, diagonal and vertical.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+performs a de-noising or compression process
+of a signal or an image using wavelets.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=sin(2*%pi*(0:0.01:1));
+xn=x+rand(x);
+thr=35;
+//compression  using global thresholding
+[xcomp,cxd,lxd,perf0,perfl2] = wdencmp('gbl',xn,'db3',3,thr,'h',1);
+//denoising
+// Find default values
+[thr,sorh,keepapp] = ddencmp('den','wv',x);
+// De-noise signal using global thresholding option.
+xd = wdencmp('gbl',xn,'db3',4,thr,sorh,keepapp);
+scf();clf();
+plot(xn);
+plot(xcomp,'r');
+plot(xd,'g');
+legend(["noisy signal","compressed signal","de-noised signal"],1);
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="ddencmp">ddencmp</link></member>
+   <member><link linkend="wavedec">wavedec</link></member>
+   <member><link linkend="wavedec2">wavedec2</link></member>
+   <member><link linkend="wden">wden</link></member>
+   <member><link linkend="wthresh">wthresh</link></member>
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>H. Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

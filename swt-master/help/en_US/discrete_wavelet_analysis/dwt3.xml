@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from dwt3.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="dwt3" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>dwt3</refname>
+    <refpurpose>Three Dimensional Discrete Fast Wavelet Transform</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8"</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>x:</term>
+            <listitem><para> 3D double matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Lo_D:</term>
+            <listitem><para> lowpass analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Hi_D:</term>
+            <listitem><para> highpass analysis filter</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>extMethod:</term>
+            <listitem><para> extension mode, 'zpd' for example</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>Y:</term>
+            <listitem><para> output hyper matrix, (MxNLx8), (:,:,:,1) should be LLL(LowPass on row, LowPass on column, and LowPass on Slice, (:,:,:,2) should be LLH(LowPass on row, LowPass on column, and HighPass on Slice, (:,:,:,3) for LHL, (:,:,:,4) for LHH, (:,:,:,5) for HLL, (:,:,:,6) for HLH, (:,:,:,7) for HHL and (:,:,:,8) for HHH.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+dwt3 is for three dimension discrete fast wavelet transform with the signal extension method optional argument.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100,100);
+Y=dwt3(x,'db2');
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_GetColor" xml:lang="en">
+    <refnamediv>
+        <refname>xls_GetColor</refname>
+        <refpurpose>Get color of a range.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>[backgroungColor [, fontColor]] = xls_GetColor([dataRange])</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>dataRange</term>
+                <listitem>
+                    <para>If dataRange is not specified, current range will be used.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>fontColor</term>
+                <listitem>
+                    <para>Font color in RGB [255, 0, 255].</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+        <title>Outputs</title>
+        <variablelist>
+            <varlistentry>
+                <term>backgroungColor</term>
+                <listitem>
+                    <para>Return the background color of dataRange.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>fontColor</term>
+                <listitem>
+                    <para>Return the font color of dataRange.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Set color of a range.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible(%t);
+
+            xls_SetData("background");
+            xls_SetColor([255, 0, 0]);
+            xls_GetColor()
+            sleep(1000);
+            xls_SetData("background + font");
+            xls_SetColor([0, 255, 0], [255, 0, 0]);
+            [a,b] = xls_GetColor()
+            sleep(1000);
+
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_SetColor">xls_SetColor</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_SetPic" xml:lang="en">
+    <refnamediv>
+        <refname>xls_SetPic</refname>
+        <refpurpose>Add picture to a cell.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_SetPic(pictureName [, x, y, w, h])</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>pictureName</term>
+                <listitem>
+                    <para>Path to the picture.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>x, y, w, h</term>
+                <listitem>
+                    <para>position of the picture.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Add picture to a cell.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            xls_SetVisible(%t);
+
+            //create a picture
+            scf(0);
+            plot2d();
+            xs2bmp(0, TMPDIR + '/foo.bmp');
+            close();
+            
+            xls_SetPic(TMPDIR + '/foo.bmp', [10 10 200 200]);
+
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+</refentry>

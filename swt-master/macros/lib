@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scilablib name="swtlib">
+  <macro name="centfrq" file="centfrq.bin" md5="41d972c89f9b3185ffeb3e21b7de9c7f"/>
+  <macro name="cwtplot" file="cwtplot.bin" md5="7772becc4ef269713c81efb6fd141a53"/>
+  <macro name="ddencmp" file="ddencmp.bin" md5="39c69eb2756c033ce053466cd9ba12e5"/>
+  <macro name="dwtplot" file="dwtplot.bin" md5="62aa2bcce1d558611526b41109298b44"/>
+  <macro name="get_swt_path" file="get_swt_path.bin" md5="eedba8439e14c7498b8ee924ec8b9935"/>
+  <macro name="indwt" file="indwt.bin" md5="86b5818d19216c875cf770c339ddc930"/>
+  <macro name="indwt2" file="indwt2.bin" md5="31ba7c317044e3f09a52f5a3542e98b1"/>
+  <macro name="meyer" file="meyer.bin" md5="0626986577002f09d2dd36414ddbd323"/>
+  <macro name="ndwt" file="ndwt.bin" md5="92b1094b0beea92e11b75236200501fc"/>
+  <macro name="ndwt2" file="ndwt2.bin" md5="d8c2addaf8ad22724fec8d838b796ea0"/>
+  <macro name="scal2frq" file="scal2frq.bin" md5="c2ce98eba1ca6f1672f96fee57d796be"/>
+  <macro name="thselect" file="thselect.bin" md5="282f3c64dc908043570db7250b6f6e80"/>
+  <macro name="wavedecplot" file="wavedecplot.bin" md5="aa6eeafb706e3321b36e4aa5c78c2a08"/>
+  <macro name="wbmpen" file="wbmpen.bin" md5="778491d1d8a787b12014673772ddabb9"/>
+  <macro name="wden" file="wden.bin" md5="5ce0a2fb71d9e2cb3e9ca8403d6ecc02"/>
+  <macro name="wdencmp" file="wdencmp.bin" md5="96a8a1780188b17f5d0e39dba0f9932a"/>
+  <macro name="wentropy" file="wentropy.bin" md5="d0f526e088d7c5442cd198ab221dcc28"/>
+  <macro name="wnoise" file="wnoise.bin" md5="eddf10aadf356b340ab47feba837237c"/>
+  <macro name="wnoisest" file="wnoisest.bin" md5="906e4474530ff3513dd56dc99247f520"/>
+  <macro name="wthresh" file="wthresh.bin" md5="aa56c9500fc16f64de06c2f972e52da1"/>
+  <macro name="wthrmngr" file="wthrmngr.bin" md5="41bd6c5ddc0603bf4e9ec77dc4400e4a"/>
+</scilablib>

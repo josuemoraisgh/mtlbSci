@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wcodemat.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wcodemat" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wcodemat</refname>
+    <refpurpose>Matrix Coding</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>X :</term>
+            <listitem><para> input double matrix</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>MAX :</term>
+            <listitem><para> maximun integer</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>mode:</term>
+            <listitem><para> row-wise ('r' or 'row'), column-wise ('c' or 'col') or matrix coding ('m' or 'mat')</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>abso :</term>
+            <listitem><para> non-zero for absolute value coding, zero for original value coding</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>M :</term>
+            <listitem><para> coded integer matrix with value ranging from 1 to MAX.</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wcodemat is an utility of coding for displaying matrix. With coding scheme to specific colormap, the content matrix could be in pseudo-color.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+m=wcodemat(x,64);
+cmap=jetcolormap(64);
+y=ind2rgb(m,cmap); // function provided by SIP toolbox
+imshow(y); // funtion provided by SIP or SIVP toolbox
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

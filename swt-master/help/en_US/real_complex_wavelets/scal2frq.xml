@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from scal2frq.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="scal2frq" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>scal2frq</refname>
+    <refpurpose>Scale to frequency</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>A:</term>
+            <listitem><para> scales</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet function name</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>DELTA:</term>
+            <listitem><para> sampling period</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>F:</term>
+            <listitem><para> corresponding frequencies for the given scales</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+Scales to Frequencies
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+// Set sampling period and wavelet name.
+delta = 0.1; wname = 'coif3';
+// Define scales.
+amax = 7; a = 2 .^[1:amax];
+// Compute associated pseudo-frequencies.
+f = scal2frq(a,wname,delta);
+// Compute associated pseudo-periods.
+per = 1 ./ f;
+// Display information.
+disp(' Scale Frequency Period')
+disp([a' f' per])
+   ]]></programlisting>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Holger Nahrstaedt - 2010-2012</member>
+   </simplelist>
+</refsection>
+</refentry>

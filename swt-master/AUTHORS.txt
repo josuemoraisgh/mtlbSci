@@ -1,0 +1,18 @@
+Authors of SWT - Scilab Wavelet Toolbox
+================================================
+(See also the file THANKS)
+
+ Roger Liu <rogeruclan at gmail.com>
+   - wrote most of this software
+
+ Isaac Zhi <QFWFQzhi at gmail.com>
+   - project management, maintenance
+
+ Jason Huang
+   - test
+
+
+ Holger Nahrstaedt 2011 - 2015
+     - is corrently the only remaining author, who is activly working on SWT
+     - porting the toolbox to scilab 5 and 6
+     - adding denoising funtions

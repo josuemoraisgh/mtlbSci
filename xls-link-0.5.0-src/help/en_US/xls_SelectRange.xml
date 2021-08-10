@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_SelectRange" xml:lang="en">
+    <refnamediv>
+        <refname>xls_SelectRange</refname>
+        <refpurpose>Select a range.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>xls_SelectRange(rangeName)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Parameters</title>
+        <variablelist>
+            <varlistentry>
+                <term>rangeName</term>
+                <listitem>
+                    <para>range to select. Can be a range ("A4:C5") or a range name ("DoubleMatrixType").</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Select a range.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            test_path = xls_getRootPath() + 'tests' + filesep() + 'unit_tests' + filesep();
+            xls_Open(test_path+'xls_GetData.xls');
+
+            xls_SelectRange('A4:C5");
+            xls_SelectRange('DoubleMatrixType')
+
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+</refentry>

@@ -1,0 +1,90 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>dualtree</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="dualfilt1.html">&lt;&lt; dualfilt1</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_38c791a40457b6dd6dfc85315ef6d2ec.html">discrete_wavelet_analysis</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="dualtree2D.html">dualtree2D &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">swt</a> &gt;&gt; <a href="section_38c791a40457b6dd6dfc85315ef6d2ec.html">discrete_wavelet_analysis</a> &gt; dualtree</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">dualtree</h1>
+    <p class="refpurpose">1D dualtree complex wavelet transform</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">x :</span>
+            <dd><p class="para">input vector</p></dd></dt>
+        <dt><span class="term">J :</span>
+            <dd><p class="para">decomposition level</p></dd></dt>
+        <dt><span class="term">Faf:</span>
+            <dd><p class="para">first stage analysis filter</p></dd></dt>
+        <dt><span class="term">af :</span>
+            <dd><p class="para">further stage analysis filter</p></dd></dt>
+        <dt><span class="term">c :</span>
+            <dd><p class="para">complex decomposition coefficient, real part for one tree and imainery part for another tree</p></dd></dt>
+        <dt><span class="term">l :</span>
+            <dd><p class="para">coefficient length array</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">dualtree is an utility function for 1D dualtree complex wavelet transform. Refer to Professor Ivan Selesnick&#0039;s webpage at Brooklyn Polytech, NY.</p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">Faf</span><span class="scilabdefault">,</span><span class="scilabid">Fsf</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">FSfarras</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">f</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">af</span><span class="scilabdefault">,</span><span class="scilabid">sf</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">dualfilt1</span><span class="scilabopenclose">(</span><span class="scilabstring">&#0039;</span><span class="scilabstring">f</span><span class="scilabstring">&#0039;</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabid">x</span><span class="scilaboperator">=</span><a class="scilabcommand" href="scilab://rand">rand</a><span class="scilabopenclose">(</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">256</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">c</span><span class="scilabdefault">,</span><span class="scilabid">l</span><span class="scilabopenclose">]</span><span class="scilaboperator">=</span><span class="scilabid">dualtree</span><span class="scilabopenclose">(</span><span class="scilabid">x</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabid">Faf</span><span class="scilabdefault">,</span><span class="scilabid">af</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Roger Liu and Isaac Zhi</li>
+   <li class="member">Copyright (C) 2010-2015 - Holger Nahrstaedt</li></ul></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="dualfilt1.html">&lt;&lt; dualfilt1</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_38c791a40457b6dd6dfc85315ef6d2ec.html">discrete_wavelet_analysis</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="dualtree2D.html">dualtree2D &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

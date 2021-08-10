@@ -1,0 +1,88 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>wbmpen</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="thselect.html">&lt;&lt; thselect</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wden.html">wden &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">swt</a> &gt;&gt; <a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a> &gt; wbmpen</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">wbmpen</h1>
+    <p class="refpurpose">Penalized threshold for wavelet 1-D or 2-D de-noising.</p></div>
+
+
+<div class="refsection"><h3 class="title">Parameters</h3>
+   <dl><dt><span class="term">THR:</span>
+            <dd><p class="para">global threshold. THR is obtained by a wavelet   coefficients selection rule using a penalization   method provided by Birge-Massart.</p></dd></dt>
+        <dt><span class="term">[C,L]:</span>
+            <dd><p class="para">is the wavelet decomposition structure of the signal or image to be de-noised.</p></dd></dt>
+        <dt><span class="term">SIGMA:</span>
+            <dd><p class="para">is the standard deviation of the zero mean Gaussian   white noise in the de-noising model (see WNOISEST for more   information).</p></dd></dt>
+        <dt><span class="term">ALPHA:</span>
+            <dd><p class="para">is a tuning parameter for the penalty term and it    must be a real number greater than 1. The sparsity of the   wavelet representation of the de-noised signal or image   grows with ALPHA. Typically ALPHA = 2.</p></dd></dt>
+        <dt><span class="term">ARG:</span>
+            <dd><p class="para">do some plotting</p></dd></dt></dl></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para"></p>
+   <p class="para">THR minimizes the penalized criterion given by:
+let t* be the minimizer of
+crit(t) = -sum(c(k)^2,k&lt;=t) + 2*SIGMA^2*t*(ALPHA + log(n/t))
+where c(k) are the wavelet coefficients sorted in
+decreasing order of their absolute value and n is the number
+of coefficients; then THR = |c(t*)|.</p>
+   <p class="para"></p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">See also</h3>
+   <ul class="itemizedlist"><li class="member"><a href="wden.html" class="link">wden</a> &#8212; Automatic 1-D de-noising</li>
+   <li class="member"><a href="wdencmp.html" class="link">wdencmp</a> &#8212; De-noising or compression using wavelets.</li>
+   <li class="member"><a href="wnoisest.html" class="link">wnoisest</a> &#8212; Estimate noise of 1-D wavelet coefficients</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="thselect.html">&lt;&lt; thselect</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_338f69997a49a9362b6b96b0f2b77b6a.html">denoising</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="wden.html">wden &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

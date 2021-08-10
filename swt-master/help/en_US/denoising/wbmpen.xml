@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wbmpen.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wbmpen" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wbmpen</refname>
+    <refpurpose>Penalized threshold for wavelet 1-D or 2-D de-noising.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>THR:</term>
+            <listitem><para>   global threshold. THR is obtained by a wavelet   coefficients selection rule using a penalization   method provided by Birge-Massart.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>[C,L]:</term>
+            <listitem><para> is the wavelet decomposition structure of the signal or image to be de-noised.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>SIGMA:</term>
+            <listitem><para> is the standard deviation of the zero mean Gaussian   white noise in the de-noising model (see WNOISEST for more   information).</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ALPHA:</term>
+            <listitem><para> is a tuning parameter for the penalty term and it    must be a real number greater than 1. The sparsity of the   wavelet representation of the de-noised signal or image   grows with ALPHA. Typically ALPHA = 2.</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ARG:</term>
+            <listitem><para> do some plotting</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+   </para>
+   <para>
+THR minimizes the penalized criterion given by:
+let t* be the minimizer of
+crit(t) = -sum(c(k)^2,k&lt;=t) + 2*SIGMA^2*t*(ALPHA + log(n/t))
+where c(k) are the wavelet coefficients sorted in
+decreasing order of their absolute value and n is the number
+of coefficients; then THR = |c(t*)|.
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   <member><link linkend="wden">wden</link></member>
+   <member><link linkend="wdencmp">wdencmp</link></member>
+   <member><link linkend="wnoisest">wnoisest</link></member>
+   </simplelist>
+</refsection>
+</refentry>

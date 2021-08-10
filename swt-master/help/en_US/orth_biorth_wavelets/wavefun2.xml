@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from wavefun2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="wavefun2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>wavefun2</refname>
+    <refpurpose>2-D Wavelet and Scaling Functions</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>wname:</term>
+            <listitem><para> wavelet name, haar( "haar"), daubechies ("db1" to "db36"), coiflets ("coif1" to "coif17"), symlets ("sym2" to "sym20"), legendre ("leg1" to "leg9"), bathlets("bath4.0" to "bath4.15" and "bath6.0" to "bath6.15"), dmey ("dmey"), beyklin ("beylkin"), vaidyanathan ("vaidyanathan"), biorthogonal B-spline wavelets ("bior1.1" to "bior6.8"), "rbior1.1" to "rbior6.8", Kingsbury ("ksq1", "ksq2"), Farras ("fa1", fa2)</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>ITER:</term>
+            <listitem><para> iteration cycle, default is 4, large cycle may consume more time</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>S :</term>
+            <listitem><para> tensor product of PHI and PHI</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>W1:</term>
+            <listitem><para> tensor product of PHI and PSI</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>W2:</term>
+            <listitem><para> tensor product of PSI and PHI</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>W3:</term>
+            <listitem><para> tensor product of PSI and PSI</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>XYVAL:</term>
+            <listitem><para> 2-D time domain grid</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+wavefun2 is an utility to get 2-D scaling function phi and wavelet function psi. Only available on orthogonal wavelets. ITER should be small integers for short computation time.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[S,W1,W2,W3,XYVAL]=wavefun2('sym4',4);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

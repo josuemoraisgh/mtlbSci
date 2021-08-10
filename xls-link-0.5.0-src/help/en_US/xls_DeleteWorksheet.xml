@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns5="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" xmlns:scilab="http://www.scilab.org" xml:id="xls_DeleteWorksheet" xml:lang="en">
+    <refnamediv>
+        <refname>xls_DeleteWorksheet</refname>
+        <refpurpose>Delete current worksheet</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Calling Sequence</title>
+        <synopsis>sheetCount = xls_DeleteWorksheet()</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Outputs</title>
+        <variablelist>
+            <varlistentry>
+                <term>sheetCount</term>
+                <listitem>
+                    <para>Return the new sheets count</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>Delete current worksheet.</para>
+    </refsection>
+    <refsection>
+        <title>Example</title>
+        <programlisting role="example">
+            xls_NewExcel();
+            xls_AddWorkbook();
+            for i=1:10
+                x = xls_AddWorksheet();
+            end
+            
+            for i=1:10
+                x = xls_DeleteWorksheet();
+                xls_SetWorksheet(x);
+            end
+            
+            xls_SetSave(%t);
+            xls_Close();
+            xls_Quit();
+        </programlisting>
+    </refsection>
+    <refsection>
+        <title>See Also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="xls_AddWorksheet">xls_AddWorksheet</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from detcoef2.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="detcoef2" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>detcoef2</refname>
+    <refpurpose>Two Dimension Detail Coefficent Extraction</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Parameters</title>
+   <variablelist>
+        <varlistentry>
+            <term>H :</term>
+            <listitem><para> reconstructed horizontal detail coefficient</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>V :</term>
+            <listitem><para> reconstructed vertical detail coefficient</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>D :</term>
+            <listitem><para> reconstructed diagonal detail coefficient</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>c :</term>
+            <listitem><para> coefficent array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>s :</term>
+            <listitem><para> size array</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>N :</term>
+            <listitem><para> restruction level</para></listitem>
+        </varlistentry>
+        <varlistentry>
+            <term>type:</term>
+            <listitem><para> 'h', 'v', 'd', 'c' or 'all'</para></listitem>
+        </varlistentry>
+   </variablelist>
+</refsection>
+
+<refsection>
+   <title>Description</title>
+   <para>
+detcoef2 is for extraction of detail coeffient at different level after a multiple level decompostion. Extension mode is stored as a global variable and could be changed with dwtmode.
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+x=rand(100,100);
+[C,S]=wavedec2(x,3,'db2');
+H2=detcoef2('h',C,S,2);
+
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Roger Liu and Isaac Zhi</member>
+   <member>Copyright (C) 2010-2015 - Holger Nahrstaedt</member>
+   </simplelist>
+</refsection>
+
+<refsection role="see also">
+   <title>See also</title>
+   <simplelist type="inline">
+   </simplelist>
+</refsection>
+</refentry>

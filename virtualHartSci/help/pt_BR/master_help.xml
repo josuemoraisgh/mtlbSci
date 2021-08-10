@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a619051429d5a9ef31a001a403a638f84 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtAquisicao.xml">
+<!ENTITY aa4734149698ec51e69d710847bfbda0c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtCommand.xml">
+<!ENTITY aa187c6c9d81e20e19acc64d48b9c990f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtCommandAnswer.xml">
+<!ENTITY a0218a242f9b8361b17f81e7ac402cdb9 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameADDRESS.xml">
+<!ENTITY a7fe1a0841a0f10317cc91f87527dc381 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameBody.xml">
+<!ENTITY a1244e55f41cd750a1926d435c1a8c455 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameCalcCkSum.xml">
+<!ENTITY a47b1b0b3bc5708ecb8edfbda38b36149 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameCkSum.xml">
+<!ENTITY af0385b598936b8d15ed3a9a0791c14aa SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameCommand.xml">
+<!ENTITY a239d341d9e61792f9ca2b838ae628e38 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameDelimiter.xml">
+<!ENTITY a5cc70dafd2d8708c4e2733c4d62ecf63 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameIni.xml">
+<!ENTITY a8a9eef14ef2b1b655446225c6a2fd567 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFramePreamble.xml">
+<!ENTITY a3da02259c641ecfb8fb9afe63a7ca0d1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtFrameType.xml">
+<!ENTITY a4781eb512b5e698ac0e0e02c2b4989bc SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtGuiAtualizar.xml">
+<!ENTITY abf3f45caa0661df8af835b7a2d9b9df1 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtGuiConectar.xml">
+<!ENTITY a49a9a44e45787d098059076ab7a28508 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtGuiDesconectar.xml">
+<!ENTITY a0deb94d5227d324c78b90be1b91e520c SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialClose.xml">
+<!ENTITY a8a1c28ca2870564a42ea90fbdfa8601e SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialCloseAll.xml">
+<!ENTITY acd0933e133f8c3dea87e67820a40e774 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialOpen.xml">
+<!ENTITY adc5797b2bcd73caa796de9b1717e5470 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialRead.xml">
+<!ENTITY ae668fa108060f2ce6995bd8aff70c9bf SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialStatus.xml">
+<!ENTITY a0d98284b07d367029d7469a6076f37d9 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtSerialWrite.xml">
+<!ENTITY a3dc4962cc9b2e4fab6c862f5e4cced3e SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeDate2Hex.xml">
+<!ENTITY addd6dcdd428e670e41575ae219735307 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2Date.xml">
+<!ENTITY a9e301f60445e6630f215949c0ab93057 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2Int.xml">
+<!ENTITY a01552bd5af0af11343ea988dbf921ca5 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2PAscii.xml">
+<!ENTITY a67ae1cc4053383091d46fe47a8157a15 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2SReal.xml">
+<!ENTITY ab932c464d28df2458510ed54827538c7 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2Time.xml">
+<!ENTITY af7251cbceb1fc635bd2b1d8846dcc620 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeHex2UInt.xml">
+<!ENTITY ac3494b714d55a75a93de1d3cc438279f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeInt2Hex.xml">
+<!ENTITY afe5eadd23ab1c8c7c8fe85ff758bef0b SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypePAscii2Hex.xml">
+<!ENTITY ae083dc67e1151ee9bb799c0507cf174f SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeSReal2Hex.xml">
+<!ENTITY a495b19e8d4dfa40f237534507ef6c309 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeTime2Hex.xml">
+<!ENTITY a0b3b0ffceacb7a0fc57dccbc7bde0166 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtTypeUInt2Hex.xml">
+<!ENTITY a059c353f40f9723b605914bb9a691556 SYSTEM "file:///C:/Users/josue/OneDrive - ufu.br/01 GitHub/PCUFU/virtualHartSci/virtualHartSci/help/pt_BR/hrtVirtual.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="pt_BR"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='virtualhartsci_manual'>
+    <title>virtualHartSci</title>
+  </info>
+
+<part xml:id='section_7a3758732edbc4dbab00cf55832a3884'>
+<title>virtualHartSci</title>
+&a619051429d5a9ef31a001a403a638f84;
+&aa4734149698ec51e69d710847bfbda0c;
+&aa187c6c9d81e20e19acc64d48b9c990f;
+&a0218a242f9b8361b17f81e7ac402cdb9;
+&a7fe1a0841a0f10317cc91f87527dc381;
+&a1244e55f41cd750a1926d435c1a8c455;
+&a47b1b0b3bc5708ecb8edfbda38b36149;
+&af0385b598936b8d15ed3a9a0791c14aa;
+&a239d341d9e61792f9ca2b838ae628e38;
+&a5cc70dafd2d8708c4e2733c4d62ecf63;
+&a8a9eef14ef2b1b655446225c6a2fd567;
+&a3da02259c641ecfb8fb9afe63a7ca0d1;
+&a4781eb512b5e698ac0e0e02c2b4989bc;
+&abf3f45caa0661df8af835b7a2d9b9df1;
+&a49a9a44e45787d098059076ab7a28508;
+&a0deb94d5227d324c78b90be1b91e520c;
+&a8a1c28ca2870564a42ea90fbdfa8601e;
+&acd0933e133f8c3dea87e67820a40e774;
+&adc5797b2bcd73caa796de9b1717e5470;
+&ae668fa108060f2ce6995bd8aff70c9bf;
+&a0d98284b07d367029d7469a6076f37d9;
+&a3dc4962cc9b2e4fab6c862f5e4cced3e;
+&addd6dcdd428e670e41575ae219735307;
+&a9e301f60445e6630f215949c0ab93057;
+&a01552bd5af0af11343ea988dbf921ca5;
+&a67ae1cc4053383091d46fe47a8157a15;
+&ab932c464d28df2458510ed54827538c7;
+&af7251cbceb1fc635bd2b1d8846dcc620;
+&ac3494b714d55a75a93de1d3cc438279f;
+&afe5eadd23ab1c8c7c8fe85ff758bef0b;
+&ae083dc67e1151ee9bb799c0507cf174f;
+&a495b19e8d4dfa40f237534507ef6c309;
+&a0b3b0ffceacb7a0fc57dccbc7bde0166;
+&a059c353f40f9723b605914bb9a691556;
+</part>
+</book>
