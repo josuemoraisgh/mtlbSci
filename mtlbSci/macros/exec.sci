@@ -1,8 +1,11 @@
 function varargout = exec(varargin)
  if argn(2)==0 then
     nomearq = uigetfile("*.*",pwd());
+    assingnin
+    macrovar(nomearq);
     execold(mtlbSci_translate(nomearq),-1);
  else
+      macrovar(varargin(1));
       select argn(2)
         case 1 then
             if isdir(varargin(1)) then
